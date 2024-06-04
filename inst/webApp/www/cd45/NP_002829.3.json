@@ -1,0 +1,697 @@
+{
+  "metadata": [
+    {
+      "accession": "NP_002829",
+      "description": "receptor-type tyrosine-protein phosphatase Cisoform 1 precursor",
+      "link": "https://www.ncbi.nlm.nih.gov/protein/NP_002829",
+      "organism": "Homo sapiens",
+      "taxid": "9606"
+    }
+  ],
+  "length": [1306],
+  "regions": [
+    {
+      "text": "ptp",
+      "start": 7,
+      "end": 32,
+      "startStyle": "straight",
+      "endStyle": "straight",
+      "colour": "#FF0000",
+      "metadata": {
+        "description": "PTP_N|note: Protein tyrosine phosphatase N terminal%3b pfam12453",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "start": 7,
+        "end": 32,
+        "accession": "CDD:403599",
+        "identifier": "ptp"
+      }
+    },
+    {
+      "text": "pha03255",
+      "start": 81,
+      "end": 231,
+      "startStyle": "curved",
+      "endStyle": "curved",
+      "colour": "#FFFF00",
+      "metadata": {
+        "description": "PHA03255|note: BDLF3%3b Provisional",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "start": 81,
+        "end": 231,
+        "accession": "CDD:165513",
+        "identifier": "pha03255"
+      }
+    },
+    {
+      "text": "cd45",
+      "start": 237,
+      "end": 295,
+      "startStyle": "curved",
+      "endStyle": "curved",
+      "colour": "#00FF00",
+      "metadata": {
+        "description": "CD45|note: Leukocyte receptor CD45%3b pfam12567",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "start": 237,
+        "end": 295,
+        "accession": "CDD:432641",
+        "identifier": "cd45"
+      }
+    },
+    {
+      "text": "fn3",
+      "start": 393,
+      "end": 462,
+      "startStyle": "curved",
+      "endStyle": "curved",
+      "colour": "#00FFFF",
+      "metadata": {
+        "description": "fn3|note: Fibronectin type III domain%3b pfam00041",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "start": 393,
+        "end": 462,
+        "accession": "CDD:394996",
+        "identifier": "fn3"
+      }
+    },
+    {
+      "text": "fn3",
+      "start": 485,
+      "end": 565,
+      "startStyle": "jagged",
+      "endStyle": "jagged",
+      "colour": "#00FFFF",
+      "metadata": {
+        "description": "FN3|note: Fibronectin type 3 domain%3b One of three types ofinternal repeats found in the plasma protein fibronectin.Its tenth fibronectin type III repeat contains an RGD cellrecognition sequence in a flexible loop between 2 strands.Approximately 2%25 of all...%3b cd00063",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "start": 485,
+        "end": 565,
+        "accession": "CDD:238020",
+        "identifier": "fn3"
+      }
+    },
+    {
+      "text": "r-ptpc-c-1",
+      "start": 707,
+      "end": 907,
+      "startStyle": "jagged",
+      "endStyle": "jagged",
+      "colour": "#0000FF",
+      "metadata": {
+        "description": "R-PTPc-C-1|note: catalytic domain of receptor-type tyrosine-proteinphosphatase C, repeat 1%3b cd14557",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "start": 707,
+        "end": 907,
+        "accession": "CDD:350405",
+        "identifier": "r-ptpc-c-1"
+      }
+    },
+    {
+      "text": "r-ptp-c-2",
+      "start": 1017,
+      "end": 1223,
+      "startStyle": "jagged",
+      "endStyle": "jagged",
+      "colour": "#FF00FF",
+      "metadata": {
+        "description": "R-PTP-C-2|note: PTP-like domain of receptor-type tyrosine-proteinphosphatase C, repeat 2%3b cd14558",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "start": 1017,
+        "end": 1223,
+        "accession": "CDD:350406",
+        "identifier": "r-ptp-c-2"
+      }
+    }
+  ],
+  "motifs": [
+    {
+      "type": "disordered_region",
+      "start": 28,
+      "end": 163,
+      "colour": "#F3F2DC",
+      "display": "true",
+      "metadata": {
+        "description": "Disordered./evidence%3dECO:0000256|SAM:MobiDB-lite|note: propagated from UniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "sequence": "N/A",
+        "type": "disordered_region",
+        "start": 28,
+        "end": 163
+      }
+    },
+    {
+      "type": "disordered_region",
+      "start": 993,
+      "end": 1014,
+      "colour": "#F3F2DC",
+      "display": "true",
+      "metadata": {
+        "description": "Disordered./evidence%3dECO:0000256|SAM:MobiDB-lite|note: propagated from UniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "sequence": "N/A",
+        "type": "disordered_region",
+        "start": 993,
+        "end": 1014
+      }
+    },
+    {
+      "type": "disordered_region",
+      "start": 1261,
+      "end": 1306,
+      "colour": "#F3F2DC",
+      "display": "true",
+      "metadata": {
+        "description": "Disordered./evidence%3dECO:0000256|SAM:MobiDB-lite|note: propagated from UniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "sequence": "N/A",
+        "type": "disordered_region",
+        "start": 1261,
+        "end": 1306
+      }
+    },
+    {
+      "type": "other",
+      "start": 485,
+      "end": 561,
+      "colour": "#C2C2C2",
+      "display": "true",
+      "metadata": {
+        "description": "active|note: Interdomain contacts [active]",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "sequence": "N/A",
+        "type": "other",
+        "start": 485,
+        "end": 561
+      }
+    },
+    {
+      "type": "transmembrane",
+      "start": 578,
+      "end": 598,
+      "colour": "#0033FF",
+      "display": "true",
+      "metadata": {
+        "description": "transmembrane region|note: propagated from UniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "sequence": "N/A",
+        "type": "transmembrane",
+        "start": 578,
+        "end": 598
+      }
+    }
+  ],
+  "markups": [
+    {
+      "type": "N-glycosylation",
+      "start": 80,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "glycosylation|note: N-linked (GlcNAc...) asparagine./evidence%3dECO:0000255%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 80
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 92,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "glycosylation|note: N-linked (GlcNAc...) asparagine./evidence%3dECO:0000255%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 92
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 97,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "glycosylation|note: N-linked (GlcNAc...) asparagine./evidence%3dECO:0000255%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 97
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 186,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "glycosylation|note: N-linked (GlcNAc...) asparagine./evidence%3dECO:0000255%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 186
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 192,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "glycosylation|note: N-linked (GlcNAc...) asparagine./evidence%3dECO:0000255%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 192
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 199,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "glycosylation|note: N-linked (GlcNAc...) asparagine./evidence%3dECO:0000255%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 199
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 234,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "glycosylation|note: N-linked (GlcNAc...) asparagine./evidence%3dECO:0000269|PubMed:19159218,ECO:0000269|PubMed:19349973%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 234
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 262,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "glycosylation|note: N-linked (GlcNAc...) asparagine./evidence%3dECO:0000255%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 262
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 272,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "glycosylation|note: N-linked (GlcNAc...) asparagine./evidence%3dECO:0000255%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 272
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 278,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "glycosylation|note: N-linked (GlcNAc...) asparagine./evidence%3dECO:0000269|PubMed:19349973%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 278
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 286,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "glycosylation|note: N-linked (GlcNAc...) asparagine, atypical./evidence%3dECO:0000269|PubMed:19349973%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 286
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 337,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "glycosylation|note: N-linked (GlcNAc...) asparagine./evidence%3dECO:0000269|PubMed:19159218,ECO:0000269|PubMed:19349973%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 337
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 380,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "glycosylation|note: N-linked (GlcNAc...) asparagine./evidence%3dECO:0000255%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 380
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 421,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "glycosylation|note: N-linked (GlcNAc...) asparagine./evidence%3dECO:0000269|PubMed:19349973%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 421
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 470,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "glycosylation|note: N-linked (GlcNAc...) asparagine./evidence%3dECO:0000255%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 470
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 490,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "glycosylation|note: N-linked (GlcNAc...) asparagine./evidence%3dECO:0000269|PubMed:19349973%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 490
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 531,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "glycosylation|note: N-linked (GlcNAc...) asparagine./evidence%3dECO:0000255%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 531
+      }
+    },
+    {
+      "type": "Phospho-Tyrosine",
+      "start": 683,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "diamond",
+      "display": "true",
+      "metadata": {
+        "description": "phosphorylation|note: Phosphotyrosine./evidence%3dECO:0000250|UniProtKB:P04157%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "Phospho-Tyrosine",
+        "start": 683
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 975,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "phosphorylation|note: Phosphoserine./evidence%3dECO:0007744|PubMed:19367720,ECO:0007744|PubMed:19690332, ECO:0007744|PubMed:23186163%3bpropagated from UniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "Phospho-Serine",
+        "start": 975
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 994,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "phosphorylation|note: Phosphoserine./evidence%3dECO:0007744|PubMed:23186163%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "Phospho-Serine",
+        "start": 994
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 997,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "phosphorylation|note: Phosphoserine./evidence%3dECO:0000250|UniProtKB:P04157%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "Phospho-Serine",
+        "start": 997
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 1001,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "phosphorylation|note: Phosphoserine./evidence%3dECO:0000250|UniProtKB:P04157%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "Phospho-Serine",
+        "start": 1001
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 1004,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "phosphorylation|note: Phosphoserine./evidence%3dECO:0000250|UniProtKB:P04157%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "Phospho-Serine",
+        "start": 1004
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 1005,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "phosphorylation|note: Phosphoserine./evidence%3dECO:0000250|UniProtKB:P06800%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "Phospho-Serine",
+        "start": 1005
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 1009,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "phosphorylation|note: Phosphoserine./evidence%3dECO:0000250|UniProtKB:P04157%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "Phospho-Serine",
+        "start": 1009
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 1299,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "phosphorylation|note: Phosphoserine./evidence%3dECO:0007744|PubMed:19690332%3b propagated fromUniProtKB/Swiss-Prot (P08575.3)",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "target": "N/A",
+        "type": "Phospho-Serine",
+        "start": 1299
+      }
+    }
+  ]
+}

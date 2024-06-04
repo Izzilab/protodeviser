@@ -1,0 +1,1333 @@
+{
+  "metadata": [
+    {
+      "accession": "",
+      "description": "cd45_custom",
+      "link.url": "",
+      "organism": "",
+      "taxid": ""
+    }
+  ],
+  "length": [1306],
+  "regions": [
+    {
+      "text": "ptp",
+      "start": 7,
+      "end": 32,
+      "startStyle": "straight",
+      "endStyle": "straight",
+      "colour": "#FF0000",
+      "metadata": {
+        "description": "PTP_N|note: Protein tyrosine phosphatase N terminal%3b pfam12453",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "start": 7,
+        "end": 32,
+        "identifier": "ptp"
+      }
+    },
+    {
+      "text": "pha03255",
+      "start": 81,
+      "end": 231,
+      "startStyle": "curved",
+      "endStyle": "curved",
+      "colour": "#CCFF00",
+      "metadata": {
+        "description": "PHA03255|note: BDLF3%3b Provisional",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "start": 81,
+        "end": 231,
+        "identifier": "pha03255"
+      }
+    },
+    {
+      "text": "cd45",
+      "start": 237,
+      "end": 295,
+      "startStyle": "curved",
+      "endStyle": "curved",
+      "colour": "#00FF66",
+      "metadata": {
+        "description": "CD45|note: Leukocyte receptor CD45%3b pfam12567",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "start": 237,
+        "end": 295,
+        "identifier": "cd45"
+      }
+    },
+    {
+      "text": "FN3",
+      "start": 391,
+      "end": 483,
+      "startStyle": "curved",
+      "endStyle": "curved",
+      "colour": "#0066FF",
+      "metadata": {
+        "description": "Domain | note: Fibronectin type-III",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "start": 391,
+        "end": 483,
+        "identifier": "FN3"
+      }
+    },
+    {
+      "text": "FN3",
+      "start": 484,
+      "end": 576,
+      "startStyle": "curved",
+      "endStyle": "curved",
+      "colour": "#0066FF",
+      "metadata": {
+        "description": "Domain | note: Fibronectin type-III",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "start": 484,
+        "end": 576,
+        "identifier": "FN3"
+      }
+    },
+    {
+      "text": "PTPc",
+      "start": 653,
+      "end": 912,
+      "startStyle": "arrow",
+      "endStyle": "arrow",
+      "colour": "#CC00FF",
+      "metadata": {
+        "description": "Domain | note: Tyrosine-protein phosphatase",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "start": 653,
+        "end": 912,
+        "identifier": "PTPc"
+      }
+    },
+    {
+      "text": "PTPc",
+      "start": 707,
+      "end": 907,
+      "startStyle": "jagged",
+      "endStyle": "jagged",
+      "colour": "#CC00FF",
+      "metadata": {
+        "description": "R-PTPc-C-1|note: catalytic domain of receptor-type tyrosine-proteinphosphatase C, repeat 1%3b cd14557",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "start": 707,
+        "end": 907,
+        "identifier": "PTPc"
+      }
+    },
+    {
+      "text": "PTPc",
+      "start": 944,
+      "end": 1228,
+      "startStyle": "arrow",
+      "endStyle": "arrow",
+      "colour": "#CC00FF",
+      "metadata": {
+        "description": "Domain | note: Tyrosine-protein phosphatase",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "start": 944,
+        "end": 1228,
+        "identifier": "PTPc"
+      }
+    },
+    {
+      "text": "PTPc",
+      "start": 1017,
+      "end": 1223,
+      "startStyle": "jagged",
+      "endStyle": "jagged",
+      "colour": "#CC00FF",
+      "metadata": {
+        "description": "R-PTP-C-2|note: PTP-like domain of receptor-type tyrosine-proteinphosphatase C, repeat 2%3b cd14558",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "start": 1017,
+        "end": 1223,
+        "identifier": "PTPc"
+      }
+    }
+  ],
+  "motifs": [
+    {
+      "type": "signal_peptide",
+      "start": 1,
+      "end": 25,
+      "colour": "#FF0000",
+      "display": "true",
+      "metadata": {
+        "description": "Signal | note: ",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "signal_peptide",
+        "start": 1,
+        "end": 25
+      }
+    },
+    {
+      "type": "disordered_region",
+      "start": 28,
+      "end": 163,
+      "colour": "#F3F2DC",
+      "display": "true",
+      "metadata": {
+        "description": "Region | note: Disordered",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "disordered_region",
+        "start": 28,
+        "end": 163
+      }
+    },
+    {
+      "type": "other",
+      "start": 485,
+      "end": 561,
+      "colour": "#C2C2C2",
+      "display": "true",
+      "metadata": {
+        "description": "active|note: Interdomain contacts [active]",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "NCBI:GenPept",
+        "type": "other",
+        "start": 485,
+        "end": 561
+      }
+    },
+    {
+      "type": "transmembrane",
+      "start": 578,
+      "end": 598,
+      "colour": "#0033FF",
+      "display": "true",
+      "metadata": {
+        "description": "Transmembrane | note: Helical",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "transmembrane",
+        "start": 578,
+        "end": 598
+      }
+    },
+    {
+      "type": "docking_ligand",
+      "start": 853,
+      "end": 859,
+      "colour": "#4e9a06",
+      "display": "true",
+      "metadata": {
+        "description": "Binding site | note: ",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "docking_ligand",
+        "start": 853,
+        "end": 859
+      }
+    },
+    {
+      "type": "disordered_region",
+      "start": 993,
+      "end": 1014,
+      "colour": "#F3F2DC",
+      "display": "true",
+      "metadata": {
+        "description": "Region | note: Disordered",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "disordered_region",
+        "start": 993,
+        "end": 1014
+      }
+    },
+    {
+      "type": "disordered_region",
+      "start": 1261,
+      "end": 1306,
+      "colour": "#F3F2DC",
+      "display": "true",
+      "metadata": {
+        "description": "Region | note: Disordered",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "disordered_region",
+        "start": 1261,
+        "end": 1306
+      }
+    },
+    {
+      "type": "charged_polar_reg",
+      "start": 1280,
+      "end": 1306,
+      "colour": "#660099",
+      "display": "true",
+      "metadata": {
+        "description": "Compositional bias | note: Polar residues",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "charged_polar_reg",
+        "start": 1280,
+        "end": 1306
+      }
+    },
+    {
+      "type": "low_complexity",
+      "start": 164,
+      "end": 182,
+      "colour": "#F700A4",
+      "display": "true",
+      "metadata": {
+        "description": "low complexity",
+        "scoreName": "e-value",
+        "score": "N/A",
+        "database": "S.M.A.R.T.",
+        "type": "low_complexity",
+        "start": 164,
+        "end": 182
+      }
+    },
+    {
+      "type": "low_complexity",
+      "start": 214,
+      "end": 227,
+      "colour": "#F700A4",
+      "display": "true",
+      "metadata": {
+        "description": "low complexity",
+        "scoreName": "e-value",
+        "score": "N/A",
+        "database": "S.M.A.R.T.",
+        "type": "low_complexity",
+        "start": 214,
+        "end": 227
+      }
+    },
+    {
+      "type": "disor_region_bind",
+      "start": 49,
+      "end": 73,
+      "colour": "#DCDCA9",
+      "display": "true",
+      "metadata": {
+        "description": "Intrinsically disordered binding site",
+        "scoreName": "threshold",
+        "score": "> 0.6",
+        "database": "IUPred3..ANCHOR2",
+        "type": "disor_region_bind",
+        "start": 49,
+        "end": 73
+      }
+    },
+    {
+      "type": "disor_region_bind",
+      "start": 76,
+      "end": 76,
+      "colour": "#DCDCA9",
+      "display": "true",
+      "metadata": {
+        "description": "Intrinsically disordered binding site",
+        "scoreName": "threshold",
+        "score": "> 0.6",
+        "database": "IUPred3..ANCHOR2",
+        "type": "disor_region_bind",
+        "start": 76,
+        "end": 76
+      }
+    },
+    {
+      "type": "disor_region_bind",
+      "start": 82,
+      "end": 171,
+      "colour": "#DCDCA9",
+      "display": "true",
+      "metadata": {
+        "description": "Intrinsically disordered binding site",
+        "scoreName": "threshold",
+        "score": "> 0.6",
+        "database": "IUPred3..ANCHOR2",
+        "type": "disor_region_bind",
+        "start": 82,
+        "end": 171
+      }
+    },
+    {
+      "type": "disor_region_bind",
+      "start": 180,
+      "end": 180,
+      "colour": "#DCDCA9",
+      "display": "true",
+      "metadata": {
+        "description": "Intrinsically disordered binding site",
+        "scoreName": "threshold",
+        "score": "> 0.6",
+        "database": "IUPred3..ANCHOR2",
+        "type": "disor_region_bind",
+        "start": 180,
+        "end": 180
+      }
+    },
+    {
+      "type": "disor_region_bind",
+      "start": 1249,
+      "end": 1250,
+      "colour": "#DCDCA9",
+      "display": "true",
+      "metadata": {
+        "description": "Intrinsically disordered binding site",
+        "scoreName": "threshold",
+        "score": "> 0.6",
+        "database": "IUPred3..ANCHOR2",
+        "type": "disor_region_bind",
+        "start": 1249,
+        "end": 1250
+      }
+    },
+    {
+      "type": "disor_region_bind",
+      "start": 1267,
+      "end": 1306,
+      "colour": "#DCDCA9",
+      "display": "true",
+      "metadata": {
+        "description": "Intrinsically disordered binding site",
+        "scoreName": "threshold",
+        "score": "> 0.6",
+        "database": "IUPred3..ANCHOR2",
+        "type": "disor_region_bind",
+        "start": 1267,
+        "end": 1306
+      }
+    },
+    {
+      "type": "docking_ligand",
+      "start": 935,
+      "end": 941,
+      "colour": "#4e9a06",
+      "display": "true",
+      "metadata": {
+        "description": "SH3 domain ligands",
+        "scoreName": "Conservation Score",
+        "score": "0",
+        "database": "E.L.M",
+        "type": "docking_ligand",
+        "start": 935,
+        "end": 941
+      }
+    },
+    {
+      "type": "docking_ligand",
+      "start": 101,
+      "end": 107,
+      "colour": "#4e9a06",
+      "display": "true",
+      "metadata": {
+        "description": "SH3 domain ligands",
+        "scoreName": "Conservation Score",
+        "score": "0",
+        "database": "E.L.M",
+        "type": "docking_ligand",
+        "start": 101,
+        "end": 107
+      }
+    },
+    {
+      "type": "docking_ligand",
+      "start": 104,
+      "end": 110,
+      "colour": "#4e9a06",
+      "display": "true",
+      "metadata": {
+        "description": "SH3 domain ligands",
+        "scoreName": "Conservation Score",
+        "score": "0",
+        "database": "E.L.M",
+        "type": "docking_ligand",
+        "start": 104,
+        "end": 110
+      }
+    },
+    {
+      "type": "docking_ligand",
+      "start": 1291,
+      "end": 1297,
+      "colour": "#4e9a06",
+      "display": "true",
+      "metadata": {
+        "description": "SH3 domain ligands",
+        "scoreName": "Conservation Score",
+        "score": "0",
+        "database": "E.L.M",
+        "type": "docking_ligand",
+        "start": 1291,
+        "end": 1297
+      }
+    },
+    {
+      "type": "docking_ligand",
+      "start": 1294,
+      "end": 1300,
+      "colour": "#4e9a06",
+      "display": "true",
+      "metadata": {
+        "description": "SH3 domain ligands",
+        "scoreName": "Conservation Score",
+        "score": "0",
+        "database": "E.L.M",
+        "type": "docking_ligand",
+        "start": 1294,
+        "end": 1300
+      }
+    },
+    {
+      "type": "docking_ligand",
+      "start": 156,
+      "end": 162,
+      "colour": "#4e9a06",
+      "display": "true",
+      "metadata": {
+        "description": "SH3 domain ligands",
+        "scoreName": "Conservation Score",
+        "score": "0",
+        "database": "E.L.M",
+        "type": "docking_ligand",
+        "start": 156,
+        "end": 162
+      }
+    },
+    {
+      "type": "docking_ligand",
+      "start": 159,
+      "end": 165,
+      "colour": "#4e9a06",
+      "display": "true",
+      "metadata": {
+        "description": "SH3 domain ligands",
+        "scoreName": "Conservation Score",
+        "score": "0",
+        "database": "E.L.M",
+        "type": "docking_ligand",
+        "start": 159,
+        "end": 165
+      }
+    },
+    {
+      "type": "docking_ligand",
+      "start": 220,
+      "end": 226,
+      "colour": "#4e9a06",
+      "display": "true",
+      "metadata": {
+        "description": "SH3 domain ligands",
+        "scoreName": "Conservation Score",
+        "score": "0",
+        "database": "E.L.M",
+        "type": "docking_ligand",
+        "start": 220,
+        "end": 226
+      }
+    },
+    {
+      "type": "docking_ligand",
+      "start": 38,
+      "end": 44,
+      "colour": "#4e9a06",
+      "display": "true",
+      "metadata": {
+        "description": "SH3 domain ligands",
+        "scoreName": "Conservation Score",
+        "score": "0",
+        "database": "E.L.M",
+        "type": "docking_ligand",
+        "start": 38,
+        "end": 44
+      }
+    },
+    {
+      "type": "docking_ligand",
+      "start": 935,
+      "end": 941,
+      "colour": "#4e9a06",
+      "display": "true",
+      "metadata": {
+        "description": "SH3 domain ligands",
+        "scoreName": "Conservation Score",
+        "score": "0",
+        "database": "E.L.M",
+        "type": "docking_ligand",
+        "start": 935,
+        "end": 941
+      }
+    },
+    {
+      "type": "docking_ligand",
+      "start": 614,
+      "end": 619,
+      "colour": "#4e9a06",
+      "display": "true",
+      "metadata": {
+        "description": "Adaptin binding Endosome-Lysosome-Basolateral sorting signals",
+        "scoreName": "Conservation Score",
+        "score": "0",
+        "database": "E.L.M",
+        "type": "docking_ligand",
+        "start": 614,
+        "end": 619
+      }
+    },
+    {
+      "type": "targeting",
+      "start": 232,
+      "end": 235,
+      "colour": "#c17d11",
+      "display": "true",
+      "metadata": {
+        "description": "Y-based sorting signal",
+        "scoreName": "Conservation Score",
+        "score": "0",
+        "database": "E.L.M",
+        "type": "targeting",
+        "start": 232,
+        "end": 235
+      }
+    }
+  ],
+  "markups": [
+    {
+      "type": "N-glycosylation",
+      "start": 80,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "N-glycosylation",
+        "start": 80
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 92,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "N-glycosylation",
+        "start": 92
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 97,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "N-glycosylation",
+        "start": 97
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 186,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "N-glycosylation",
+        "start": 186
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 192,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "N-glycosylation",
+        "start": 192
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 199,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "N-glycosylation",
+        "start": 199
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 234,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "N-glycosylation",
+        "start": 234
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 262,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "N-glycosylation",
+        "start": 262
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 272,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "N-glycosylation",
+        "start": 272
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 278,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "N-glycosylation",
+        "start": 278
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 286,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine; atypical",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "N-glycosylation",
+        "start": 286
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 337,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "N-glycosylation",
+        "start": 337
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 380,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "N-glycosylation",
+        "start": 380
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 421,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "N-glycosylation",
+        "start": 421
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 470,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "N-glycosylation",
+        "start": 470
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 490,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "N-glycosylation",
+        "start": 490
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 531,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "N-glycosylation",
+        "start": 531
+      }
+    },
+    {
+      "type": "Phospho-Tyrosine",
+      "start": 683,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "diamond",
+      "display": "true",
+      "metadata": {
+        "description": "Modified residue | note: Phosphotyrosine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "Phospho-Tyrosine",
+        "start": 683
+      }
+    },
+    {
+      "type": "binding_site",
+      "start": 821,
+      "colour": "#4e9a06",
+      "lineColour": "#4e9a06",
+      "v_align": "bottom",
+      "headStyle": "arrow",
+      "display": "true",
+      "metadata": {
+        "description": "Binding site | note: ",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "binding_site",
+        "start": 821
+      }
+    },
+    {
+      "type": "active_site",
+      "start": 853,
+      "colour": "#ef2929",
+      "lineColour": "#ef2929",
+      "v_align": "bottom",
+      "headStyle": "square",
+      "display": "true",
+      "metadata": {
+        "description": "Active site | note: Phosphocysteine intermediate",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "active_site",
+        "start": 853
+      }
+    },
+    {
+      "type": "binding_site",
+      "start": 897,
+      "colour": "#4e9a06",
+      "lineColour": "#4e9a06",
+      "v_align": "bottom",
+      "headStyle": "arrow",
+      "display": "true",
+      "metadata": {
+        "description": "Binding site | note: ",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "binding_site",
+        "start": 897
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 975,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "Modified residue | note: Phosphoserine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "Phospho-Serine",
+        "start": 975
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 994,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "Modified residue | note: Phosphoserine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "Phospho-Serine",
+        "start": 994
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 997,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "Modified residue | note: Phosphoserine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "Phospho-Serine",
+        "start": 997
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 1001,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "Modified residue | note: Phosphoserine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "Phospho-Serine",
+        "start": 1001
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 1004,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "Modified residue | note: Phosphoserine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "Phospho-Serine",
+        "start": 1004
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 1005,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "Modified residue | note: Phosphoserine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "Phospho-Serine",
+        "start": 1005
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 1009,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "Modified residue | note: Phosphoserine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "Phospho-Serine",
+        "start": 1009
+      }
+    },
+    {
+      "type": "active_site",
+      "start": 1169,
+      "colour": "#ef2929",
+      "lineColour": "#ef2929",
+      "v_align": "bottom",
+      "headStyle": "square",
+      "display": "true",
+      "metadata": {
+        "description": "Active site | note: Phosphocysteine intermediate",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "active_site",
+        "start": 1169
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 1299,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "Modified residue | note: Phosphoserine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "type": "Phospho-Serine",
+        "start": 1299
+      }
+    },
+    {
+      "type": "O-glycosylation",
+      "start": 29,
+      "colour": "#fcaf3e",
+      "lineColour": "#555753",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "O-glycosylation site",
+        "scoreName": "threshold",
+        "score": "0.969878",
+        "database": "NetNGlyc",
+        "type": "O-glycosylation",
+        "start": 29
+      }
+    },
+    {
+      "type": "O-glycosylation",
+      "start": 58,
+      "colour": "#fcaf3e",
+      "lineColour": "#555753",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "O-glycosylation site",
+        "scoreName": "threshold",
+        "score": "0.950407",
+        "database": "NetNGlyc",
+        "type": "O-glycosylation",
+        "start": 58
+      }
+    },
+    {
+      "type": "O-glycosylation",
+      "start": 221,
+      "colour": "#fcaf3e",
+      "lineColour": "#555753",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "O-glycosylation site",
+        "scoreName": "threshold",
+        "score": "0.954493",
+        "database": "NetNGlyc",
+        "type": "O-glycosylation",
+        "start": 221
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 1285,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "S-phosphorylation site",
+        "scoreName": "threshold",
+        "score": "0.997",
+        "database": "NetPhos",
+        "type": "Phospho-Serine",
+        "start": 1285
+      }
+    },
+    {
+      "type": "other",
+      "start": 761,
+      "colour": "#CACACA",
+      "lineColour": "#CACACA",
+      "v_align": "bottom",
+      "headStyle": "arrow",
+      "display": "true",
+      "metadata": {
+        "description": "Src homology 2 group",
+        "scoreName": "score/percentile/accessibility",
+        "score": "0.2764 0.001354026 1.020473",
+        "database": "ScanSite",
+        "type": "other",
+        "start": 761
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 1011,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "S-phosphorylation site",
+        "scoreName": "threshold",
+        "score": "0.996",
+        "database": "NetPhos",
+        "type": "Phospho-Serine",
+        "start": 1011
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 77,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "S-phosphorylation site",
+        "scoreName": "threshold",
+        "score": "0.996",
+        "database": "NetPhos",
+        "type": "Phospho-Serine",
+        "start": 77
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 86,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "S-phosphorylation site",
+        "scoreName": "threshold",
+        "score": "0.995",
+        "database": "NetPhos",
+        "type": "Phospho-Serine",
+        "start": 86
+      }
+    },
+    {
+      "type": "Phospho-Tyrosine",
+      "start": 232,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "diamond",
+      "display": "true",
+      "metadata": {
+        "description": "Y-phosphorylation site",
+        "scoreName": "threshold",
+        "score": "0.992",
+        "database": "NetPhos",
+        "type": "Phospho-Tyrosine",
+        "start": 232
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 533,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "S-phosphorylation site",
+        "scoreName": "threshold",
+        "score": "0.994",
+        "database": "NetPhos",
+        "type": "Phospho-Serine",
+        "start": 533
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 942,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "S-phosphorylation site",
+        "scoreName": "threshold",
+        "score": "0.993",
+        "database": "NetPhos",
+        "type": "Phospho-Serine",
+        "start": 942
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 953,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "S-phosphorylation site",
+        "scoreName": "threshold",
+        "score": "0.995",
+        "database": "NetPhos",
+        "type": "Phospho-Serine",
+        "start": 953
+      }
+    }
+  ]
+}

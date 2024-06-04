@@ -1,0 +1,32 @@
+Package: protodeviser
+Title: Protein Topology Deviser
+Version: 0.9.6
+Description: Create concise protein topology schemes
+Author: Petar Petrov & Valerio Izzi
+Authors@R: c(
+    person("Petar", "Petrov", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-5551-8032")),
+    person("Valerio", "Izzi")
+  )
+Maintainer: Petar Petrov @IzziLab <petar.petrov@oulu.fi>
+Email: petar.petrov@oulu.fi
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+LazyData: true
+Depends: R (>= 4.0)
+Imports: 
+    dplyr,
+    DT,
+    gggenomes,
+    IRanges,
+    jsonlite,
+    openxlsx,
+    rclipboard,
+    rentrez,
+    seqinr,
+    shiny,
+    shinyBS,
+    tibble
+

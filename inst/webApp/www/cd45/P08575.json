@@ -1,0 +1,747 @@
+{
+  "metadata": [
+    {
+      "accession": "P08575",
+      "description": "PTPRC_HUMAN",
+      "link": "https://www.uniprot.org/uniprotkb/P08575"
+    }
+  ],
+  "length": [1306],
+  "regions": [
+    {
+      "text": "Fibronectin type-III",
+      "start": 391,
+      "end": 483,
+      "startStyle": "curved",
+      "endStyle": "curved",
+      "colour": "#FF0000",
+      "metadata": {
+        "description": "Domain | note: Fibronectin type-III",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "start": 391,
+        "end": 483,
+        "accession": "N/A",
+        "identifier": "Fibronectin type-III"
+      }
+    },
+    {
+      "text": "Fibronectin type-III",
+      "start": 484,
+      "end": 576,
+      "startStyle": "curved",
+      "endStyle": "curved",
+      "colour": "#FF0000",
+      "metadata": {
+        "description": "Domain | note: Fibronectin type-III",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "start": 484,
+        "end": 576,
+        "accession": "N/A",
+        "identifier": "Fibronectin type-III"
+      }
+    },
+    {
+      "text": "Tyrosine-protein phosphatase",
+      "start": 653,
+      "end": 912,
+      "startStyle": "arrow",
+      "endStyle": "arrow",
+      "colour": "#00FFFF",
+      "metadata": {
+        "description": "Domain | note: Tyrosine-protein phosphatase",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "start": 653,
+        "end": 912,
+        "accession": "N/A",
+        "identifier": "Tyrosine-protein phosphatase"
+      }
+    },
+    {
+      "text": "Tyrosine-protein phosphatase",
+      "start": 944,
+      "end": 1228,
+      "startStyle": "arrow",
+      "endStyle": "arrow",
+      "colour": "#00FFFF",
+      "metadata": {
+        "description": "Domain | note: Tyrosine-protein phosphatase",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "start": 944,
+        "end": 1228,
+        "accession": "N/A",
+        "identifier": "Tyrosine-protein phosphatase"
+      }
+    }
+  ],
+  "motifs": [
+    {
+      "type": "docking_ligand",
+      "start": 853,
+      "end": 859,
+      "colour": "#4e9a06",
+      "display": "true",
+      "metadata": {
+        "description": "Binding site | note: ",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "sequence": "N/A",
+        "type": "docking_ligand",
+        "start": 853,
+        "end": 859
+      }
+    },
+    {
+      "type": "charged_polar_reg",
+      "start": 1280,
+      "end": 1306,
+      "colour": "#660099",
+      "display": "true",
+      "metadata": {
+        "description": "Compositional bias | note: Polar residues",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "sequence": "N/A",
+        "type": "charged_polar_reg",
+        "start": 1280,
+        "end": 1306
+      }
+    },
+    {
+      "type": "disordered_region",
+      "start": 28,
+      "end": 163,
+      "colour": "#F3F2DC",
+      "display": "true",
+      "metadata": {
+        "description": "Region | note: Disordered",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "sequence": "N/A",
+        "type": "disordered_region",
+        "start": 28,
+        "end": 163
+      }
+    },
+    {
+      "type": "disordered_region",
+      "start": 993,
+      "end": 1014,
+      "colour": "#F3F2DC",
+      "display": "true",
+      "metadata": {
+        "description": "Region | note: Disordered",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "sequence": "N/A",
+        "type": "disordered_region",
+        "start": 993,
+        "end": 1014
+      }
+    },
+    {
+      "type": "disordered_region",
+      "start": 1261,
+      "end": 1306,
+      "colour": "#F3F2DC",
+      "display": "true",
+      "metadata": {
+        "description": "Region | note: Disordered",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "sequence": "N/A",
+        "type": "disordered_region",
+        "start": 1261,
+        "end": 1306
+      }
+    },
+    {
+      "type": "signal_peptide",
+      "start": 1,
+      "end": 25,
+      "colour": "#FF0000",
+      "display": "true",
+      "metadata": {
+        "description": "Signal | note: ",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "sequence": "N/A",
+        "type": "signal_peptide",
+        "start": 1,
+        "end": 25
+      }
+    },
+    {
+      "type": "transmembrane",
+      "start": 578,
+      "end": 598,
+      "colour": "#0033FF",
+      "display": "true",
+      "metadata": {
+        "description": "Transmembrane | note: Helical",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "sequence": "N/A",
+        "type": "transmembrane",
+        "start": 578,
+        "end": 598
+      }
+    }
+  ],
+  "markups": [
+    {
+      "type": "active_site",
+      "start": 853,
+      "colour": "#ef2929",
+      "lineColour": "#ef2929",
+      "v_align": "bottom",
+      "headStyle": "square",
+      "display": "true",
+      "metadata": {
+        "description": "Active site | note: Phosphocysteine intermediate",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "active_site",
+        "start": 853
+      }
+    },
+    {
+      "type": "active_site",
+      "start": 1169,
+      "colour": "#ef2929",
+      "lineColour": "#ef2929",
+      "v_align": "bottom",
+      "headStyle": "square",
+      "display": "true",
+      "metadata": {
+        "description": "Active site | note: Phosphocysteine intermediate",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "active_site",
+        "start": 1169
+      }
+    },
+    {
+      "type": "binding_site",
+      "start": 821,
+      "colour": "#4e9a06",
+      "lineColour": "#4e9a06",
+      "v_align": "bottom",
+      "headStyle": "arrow",
+      "display": "true",
+      "metadata": {
+        "description": "Binding site | note: ",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "binding_site",
+        "start": 821
+      }
+    },
+    {
+      "type": "binding_site",
+      "start": 897,
+      "colour": "#4e9a06",
+      "lineColour": "#4e9a06",
+      "v_align": "bottom",
+      "headStyle": "arrow",
+      "display": "true",
+      "metadata": {
+        "description": "Binding site | note: ",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "binding_site",
+        "start": 897
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 80,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 80
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 92,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 92
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 97,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 97
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 186,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 186
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 192,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 192
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 199,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 199
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 234,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 234
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 262,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 262
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 272,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 272
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 278,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 278
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 286,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine; atypical",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 286
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 337,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 337
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 380,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 380
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 421,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 421
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 470,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 470
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 490,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 490
+      }
+    },
+    {
+      "type": "N-glycosylation",
+      "start": 531,
+      "colour": "#fcaf3e",
+      "lineColour": "#fcaf3e",
+      "v_align": "top",
+      "headStyle": "line",
+      "display": "true",
+      "metadata": {
+        "description": "Glycosylation | note: N-linked (GlcNAc...) asparagine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "N-glycosylation",
+        "start": 531
+      }
+    },
+    {
+      "type": "Phospho-Tyrosine",
+      "start": 683,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "diamond",
+      "display": "true",
+      "metadata": {
+        "description": "Modified residue | note: Phosphotyrosine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "Phospho-Tyrosine",
+        "start": 683
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 975,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "Modified residue | note: Phosphoserine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "Phospho-Serine",
+        "start": 975
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 994,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "Modified residue | note: Phosphoserine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "Phospho-Serine",
+        "start": 994
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 997,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "Modified residue | note: Phosphoserine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "Phospho-Serine",
+        "start": 997
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 1001,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "Modified residue | note: Phosphoserine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "Phospho-Serine",
+        "start": 1001
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 1004,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "Modified residue | note: Phosphoserine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "Phospho-Serine",
+        "start": 1004
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 1005,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "Modified residue | note: Phosphoserine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "Phospho-Serine",
+        "start": 1005
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 1009,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "Modified residue | note: Phosphoserine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "Phospho-Serine",
+        "start": 1009
+      }
+    },
+    {
+      "type": "Phospho-Serine",
+      "start": 1299,
+      "colour": "#edd400",
+      "lineColour": "#edd400",
+      "v_align": "bottom",
+      "headStyle": "circle",
+      "display": "true",
+      "metadata": {
+        "description": "Modified residue | note: Phosphoserine",
+        "scoreName": "N/A",
+        "score": "N/A",
+        "database": "UniProtKB",
+        "target": "N/A",
+        "type": "Phospho-Serine",
+        "start": 1299
+      }
+    }
+  ]
+}

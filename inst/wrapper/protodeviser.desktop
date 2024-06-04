@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=ProToDeviseR
+Comment=
+GenericName=
+Exec=protodeviser.R
+Icon=protodeviser
+Categories=Education;
+Type=Application
+Terminal=false
+StartupNotify=false

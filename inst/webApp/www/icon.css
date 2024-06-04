@@ -1,0 +1,18 @@
+.download::before {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: -.125em;
+  content: url(./icons/down.png);
+}
+.clipboard::before {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: -.125em;
+  content: url(./icons/copy.png);
+}
+.clear::before {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: -.125em;
+  content: url(./icons/clear.png);
+}

@@ -1,0 +1,9 @@
+signal peptide	1	25	N/A
+low complexity	164	182	N/A
+low complexity	214	227	N/A
+Pfam:CD45	237	295	4.8e-29
+FN3	392	468	0.0203
+FN3	485	563	0.00237
+transmembrane region	580	602	N/A
+PTPc	652	914	1.84e-125
+PTPc	943	1230	1.18e-114

@@ -1,0 +1,282 @@
+type,by,category,returned_field
+Entry,skip,"Names & Taxonomy",accession
+"Entry Name",skip,"Names & Taxonomy",id
+"Gene Names",skip,"Names & Taxonomy",gene_names
+"Gene Names (primary)",skip,"Names & Taxonomy",gene_primary
+"Gene Names (synonym)",skip,"Names & Taxonomy",gene_synonym
+"Gene Names (ordered locus)",skip,"Names & Taxonomy",gene_oln
+"Gene Names (ORF)",skip,"Names & Taxonomy",gene_orf
+Organism,skip,"Names & Taxonomy",organism_name
+"Organism ID",skip,"Names & Taxonomy",organism_id
+"Protein names",skip,"Names & Taxonomy",protein_name
+Proteomes,skip,"Names & Taxonomy",xref_proteomes
+"Taxonomic lineage",skip,"Names & Taxonomy",lineage
+"Taxonomic lineage (IDs)",skip,"Names & Taxonomy",lineage_ids
+"Virus hosts",skip,"Names & Taxonomy",virus_hosts
+"Alternative products",skip,Sequences,cc_alternative_products
+"Alternative sequence",skip,Sequences,ft_var_seq
+"Erroneous gene model prediction",skip,Sequences,error_gmodel_pred
+Fragment,skip,Sequences,fragment
+"Gene encoded by",skip,Sequences,organelle
+Length,skip,Sequences,length
+Mass,skip,Sequences,mass
+"Mass spectrometry",skip,Sequences,cc_mass_spectrometry
+"Natural variant",skip,Sequences,ft_variant
+"Non-adjacent residues",skip,Sequences,ft_non_cons
+"Non-standard residue",skip,Sequences,ft_non_std
+"Non-terminal residue",skip,Sequences,ft_non_ter
+Polymorphism,skip,Sequences,cc_polymorphism
+"RNA editing",skip,Sequences,cc_rna_editing
+Sequence,skip,Sequences,sequence
+"Sequence caution",skip,Sequences,cc_sequence_caution
+"Sequence conflict",skip,Sequences,ft_conflict
+"Sequence uncertainty",skip,Sequences,ft_unsure
+"Sequence version",skip,Sequences,sequence_version
+Absorption,markups,Function,absorption
+"Active site",markups,Function,ft_act_site
+"Activity regulation",markups,Function,cc_activity_regulation
+"Binding site",markups,Function,ft_binding
+"Catalytic activity",markups,Function,cc_catalytic_activity
+Cofactor,markups,Function,cc_cofactor
+"DNA binding",markups,Function,ft_dna_bind
+"EC number",markups,Function,ec
+Function,markups,Function,function
+"Function [CC]",markups,Function,cc_function
+Kinetics,markups,Function,kinetics
+Pathway,markups,Function,cc_pathway
+"pH dependence",markups,Function,ph_dependence
+"Redox potential",markups,Function,redox_potential
+"Rhea ID",markups,Function,rhea
+Site,markups,Function,ft_site
+"Temperature dependence",markups,Function,temp_dependence
+Annotation,skip,Miscellaneous,annotation_score
+Caution,skip,Miscellaneous,cc_caution
+"Comment Count",skip,Miscellaneous,comment_count
+Features,skip,Miscellaneous,feature_count
+"Keyword ID",skip,Miscellaneous,keywordid
+Keywords,skip,Miscellaneous,keyword
+"Miscellaneous [CC]",skip,Miscellaneous,cc_miscellaneous
+"Protein existence",skip,Miscellaneous,protein_existence
+Reviewed,skip,Miscellaneous,reviewed
+Tools,skip,Miscellaneous,tools
+UniParc,skip,Miscellaneous,uniparc_id
+"Interacts with",markups,Interaction,cc_interaction
+"Subunit structure [CC]",skip,Interaction,cc_subunit
+"Developmental stage",skip,Expression,cc_developmental_stage
+Induction,skip,Expression,cc_induction
+"Tissue specificity",skip,Expression,cc_tissue_specificity
+"Gene ontology (biological process)",skip,"Gene Ontology",go_p
+"Gene ontology (cellular component)",skip,"Gene Ontology",go_c
+"Gene ontology (GO)",skip,"Gene Ontology",go
+"Gene ontology (molecular function)",skip,"Gene Ontology",go_f
+"Gene ontology IDs",skip,"Gene Ontology",go_id
+"Allergenic properties",skip,"Pathology & Biotech",cc_allergen
+"Biotechnological use",skip,"Pathology & Biotech",cc_biotechnology
+"Disruption phenotype",skip,"Pathology & Biotech",cc_disruption_phenotype
+"Involvement in disease",skip,"Pathology & Biotech",cc_disease
+Mutagenesis,skip,"Pathology & Biotech",ft_mutagen
+"Pharmaceutical use",skip,"Pathology & Biotech",cc_pharmaceutical
+"Toxic dose",skip,"Pathology & Biotech",cc_toxic_dose
+Intramembrane,skip,"Subcellular location",ft_intramem
+"Subcellular location [CC]",skip,"Subcellular location",cc_subcellular_location
+"Topological domain",skip,"Subcellular location",ft_topo_dom
+Transmembrane,motifs,"Subcellular location",ft_transmem
+Chain,skip,"PTM / Processsing",ft_chain
+Cross-link,markups,"PTM / Processsing",ft_crosslnk
+"Disulfide bond",markups,"PTM / Processsing",ft_disulfid
+Glycosylation,markups,"PTM / Processsing",ft_carbohyd
+"Initiator methionine",skip,"PTM / Processsing",ft_init_met
+Lipidation,markups,"PTM / Processsing",ft_lipid
+"Modified residue",markups,"PTM / Processsing",ft_mod_res
+Peptide,skip,"PTM / Processsing",ft_peptide
+"Post-translational modification",markups,"PTM / Processsing",cc_ptm
+Propeptide,skip,"PTM / Processsing",ft_propep
+"Signal peptide",motifs,"PTM / Processsing",ft_signal
+"Signal",motifs,"PTM / Processsing",ft_signal
+"Transit peptide",skip,"PTM / Processsing",ft_transit
+3D,skip,Structure,structure_3d
+"Beta strand",skip,Structure,ft_strand
+Helix,skip,Structure,ft_helix
+Turn,skip,Structure,ft_turn
+"PubMed ID",skip,Publications,lit_pubmed_id
+"Coiled coil",motifs,"Family & Domains",ft_coiled
+"Compositional bias",motifs,"Family & Domains",ft_compbias
+Domain,regions,"Family & Domains",domain
+Domain[CC],regions,"Family & Domains",cc_domain
+Domain[FT],regions,"Family & Domains",ft_domain
+Motif,regions,"Family & Domains",ft_motif
+"Protein families",skip,"Family & Domains",protein_families
+Region,regions,"Family & Domains",ft_region
+Repeat,motifs,"Family & Domains",ft_repeat
+"Zinc finger",motifs,"Family & Domains",ft_zn_fing
+CCDS,skip,"Sequence Databases",xref_ccds
+EMBL,databases,"Sequence Databases",xref_embl
+PIR,databases,"Sequence Databases",xref_pir
+RefSeq,databases,"Sequence Databases",xref_refseq
+AlphaFoldDB,databases,"3D Structure Databases",xref_alphafolddb
+BMRB,databases,"3D Structure Databases",xref_bmrb
+PCDDB,databases,"3D Structure Databases",xref_pcddb
+PDB,databases,"3D Structure Databases",xref_pdb
+PDBsum,databases,"3D Structure Databases",xref_pdbsum
+SASBDB,databases,"3D Structure Databases",xref_sasbdb
+SMR,databases,"3D Structure Databases",xref_smr
+BioGRID,databases,"Protein-Protein Interaction Databases",xref_biogrid
+CORUM,databases,"Protein-Protein Interaction Databases",xref_corum
+ComplexPortal,databases,"Protein-Protein Interaction Databases",xref_complexportal
+DIP,databases,"Protein-Protein Interaction Databases",xref_dip
+ELM,databases,"Protein-Protein Interaction Databases",xref_elm
+IntAct,databases,"Protein-Protein Interaction Databases",xref_intact
+MINT,databases,"Protein-Protein Interaction Databases",xref_mint
+STRING,databases,"Protein-Protein Interaction Databases",xref_string
+BindingDB,databases,"Chemistry Databases",xref_bindingdb
+ChEMBL,databases,"Chemistry Databases",xref_chembl
+DrugBank,databases,"Chemistry Databases",xref_drugbank
+DrugCentral,databases,"Chemistry Databases",xref_drugcentral
+GuidetoPHARMACOLOGY,databases,"Chemistry Databases",xref_guidetopharmacology
+SwissLipids,databases,"Chemistry Databases",xref_swisslipids
+Allergome,databases,"Protein Family/Group Databases",xref_allergome
+CAZy,databases,"Protein Family/Group Databases",xref_cazy
+CLAE,databases,"Protein Family/Group Databases",xref_clae
+ESTHER,databases,"Protein Family/Group Databases",xref_esther
+IMGT_GENE-DB,databases,"Protein Family/Group Databases",xref_imgt_gene-db
+MEROPS,databases,"Protein Family/Group Databases",xref_merops
+MoonDB,databases,"Protein Family/Group Databases",xref_moondb
+MoonProt,databases,"Protein Family/Group Databases",xref_moonprot
+PeroxiBase,databases,"Protein Family/Group Databases",xref_peroxibase
+REBASE,databases,"Protein Family/Group Databases",xref_rebase
+TCDB,databases,"Protein Family/Group Databases",xref_tcdb
+UniLectin,databases,"Protein Family/Group Databases",xref_unilectin
+CarbonylDB,databases,"PTM Databases",xref_carbonyldb
+DEPOD,databases,"PTM Databases",xref_depod
+GlyCosmos,databases,"PTM Databases",xref_glycosmos
+GlyConnect,databases,"PTM Databases",xref_glyconnect
+GlyGen,databases,"PTM Databases",xref_glygen
+MetOSite,databases,"PTM Databases",xref_metosite
+PhosphoSitePlus,databases,"PTM Databases",xref_phosphositeplus
+SwissPalm,databases,"PTM Databases",xref_swisspalm
+iPTMnet,databases,"PTM Databases",xref_iptmnet
+BioMuta,databases,"Genetic Variation Databases",xref_biomuta
+DMDM,databases,"Genetic Variation Databases",xref_dmdm
+dbSNP,databases,"Genetic Variation Databases",xref_dbsnp
+COMPLUYEAST-2DPAGE,databases,"2D Gel Databases",xref_compluyeast-2dpage
+DOSAC-COBS-2DPAGE,databases,"2D Gel Databases",xref_dosac-cobs-2dpage
+OGP,databases,"2D Gel Databases",xref_ogp
+REPRODUCTION-2DPAGE,databases,"2D Gel Databases",xref_reproduction-2dpage
+SWISS-2DPAGE,databases,"2D Gel Databases",xref_swiss-2dpage
+UCD-2DPAGE,databases,"2D Gel Databases",xref_ucd-2dpage
+World-2DPAGE,databases,"2D Gel Databases",xref_world-2dpage
+CPTAC,databases,"Proteomic Databases",xref_cptac
+EPD,databases,"Proteomic Databases",xref_epd
+MassIVE,databases,"Proteomic Databases",xref_massive
+MaxQB,databases,"Proteomic Databases",xref_maxqb
+PRIDE,databases,"Proteomic Databases",xref_pride
+PaxDb,databases,"Proteomic Databases",xref_paxdb
+PeptideAtlas,databases,"Proteomic Databases",xref_peptideatlas
+ProMEX,databases,"Proteomic Databases",xref_promex
+ProteomicsDB,databases,"Proteomic Databases",xref_proteomicsdb
+TopDownProteomics,databases,"Proteomic Databases",xref_topdownproteomics
+jPOST,databases,"Proteomic Databases",xref_jpost
+ABCD,databases,"Protocols And Materials Databases",xref_abcd
+Antibodypedia,databases,"Protocols And Materials Databases",xref_antibodypedia
+CPTC,databases,"Protocols And Materials Databases",xref_cptc
+DNASU,databases,"Protocols And Materials Databases",xref_dnasu
+Ensembl,databases,"Genome Annotation Databases",xref_ensembl
+EnsemblBacteria,databases,"Genome Annotation Databases",xref_ensemblbacteria
+EnsemblFungi,databases,"Genome Annotation Databases",xref_ensemblfungi
+EnsemblMetazoa,databases,"Genome Annotation Databases",xref_ensemblmetazoa
+EnsemblPlants,databases,"Genome Annotation Databases",xref_ensemblplants
+EnsemblProtists,databases,"Genome Annotation Databases",xref_ensemblprotists
+GeneID,databases,"Genome Annotation Databases",xref_geneid
+Gramene,databases,"Genome Annotation Databases",xref_gramene
+KEGG,databases,"Genome Annotation Databases",xref_kegg
+MANE-Select,databases,"Genome Annotation Databases",xref_mane-select
+PATRIC,databases,"Genome Annotation Databases",xref_patric
+UCSC,databases,"Genome Annotation Databases",xref_ucsc
+VectorBase,databases,"Genome Annotation Databases",xref_vectorbase
+WBParaSite,databases,"Genome Annotation Databases",xref_wbparasite
+WBParaSiteTranscriptProtein,databases,"Genome Annotation Databases",xref_wbparasitetranscriptprotein
+AGR,databases,"Organism-Specific Databases",xref_agr
+ArachnoServer,databases,"Organism-Specific Databases",xref_arachnoserver
+Araport,databases,"Organism-Specific Databases",xref_araport
+CGD,databases,"Organism-Specific Databases",xref_cgd
+CTD,databases,"Organism-Specific Databases",xref_ctd
+ConoServer,databases,"Organism-Specific Databases",xref_conoserver
+DisGeNET,databases,"Organism-Specific Databases",xref_disgenet
+EchoBASE,databases,"Organism-Specific Databases",xref_echobase
+FlyBase,databases,"Organism-Specific Databases",xref_flybase
+GeneCards,databases,"Organism-Specific Databases",xref_genecards
+GeneReviews,databases,"Organism-Specific Databases",xref_genereviews
+HGNC,databases,"Organism-Specific Databases",xref_hgnc
+HPA,databases,"Organism-Specific Databases",xref_hpa
+LegioList,databases,"Organism-Specific Databases",xref_legiolist
+Leproma,databases,"Organism-Specific Databases",xref_leproma
+MGI,databases,"Organism-Specific Databases",xref_mgi
+MIM,databases,"Organism-Specific Databases",xref_mim
+MaizeGDB,databases,"Organism-Specific Databases",xref_maizegdb
+MalaCards,databases,"Organism-Specific Databases",xref_malacards
+NIAGADS,databases,"Organism-Specific Databases",xref_niagads
+OpenTargets,databases,"Organism-Specific Databases",xref_opentargets
+Orphanet,databases,"Organism-Specific Databases",xref_orphanet
+PharmGKB,databases,"Organism-Specific Databases",xref_pharmgkb
+PomBase,databases,"Organism-Specific Databases",xref_pombase
+PseudoCAP,databases,"Organism-Specific Databases",xref_pseudocap
+RGD,databases,"Organism-Specific Databases",xref_rgd
+SGD,databases,"Organism-Specific Databases",xref_sgd
+TAIR,databases,"Organism-Specific Databases",xref_tair
+TubercuList,databases,"Organism-Specific Databases",xref_tuberculist
+VEuPathDB,databases,"Organism-Specific Databases",xref_veupathdb
+VGNC,databases,"Organism-Specific Databases",xref_vgnc
+WormBase,databases,"Organism-Specific Databases",xref_wormbase
+Xenbase,databases,"Organism-Specific Databases",xref_xenbase
+ZFIN,databases,"Organism-Specific Databases",xref_zfin
+dictyBase,databases,"Organism-Specific Databases",xref_dictybase
+euHCVdb,databases,"Organism-Specific Databases",xref_euhcvdb
+neXtProt,databases,"Organism-Specific Databases",xref_nextprot
+GeneTree,databases,"Phylogenomic Databases",xref_genetree
+HOGENOM,databases,"Phylogenomic Databases",xref_hogenom
+InParanoid,databases,"Phylogenomic Databases",xref_inparanoid
+KO,databases,"Phylogenomic Databases",xref_ko
+OMA,databases,"Phylogenomic Databases",xref_oma
+OrthoDB,databases,"Phylogenomic Databases",xref_orthodb
+PhylomeDB,databases,"Phylogenomic Databases",xref_phylomedb
+TreeFam,databases,"Phylogenomic Databases",xref_treefam
+eggNOG,databases,"Phylogenomic Databases",xref_eggnog
+BRENDA,databases,"Enzyme And Pathway Databases",xref_brenda
+BioCyc,databases,"Enzyme And Pathway Databases",xref_biocyc
+PathwayCommons,databases,"Enzyme And Pathway Databases",xref_pathwaycommons
+PlantReactome,databases,"Enzyme And Pathway Databases",xref_plantreactome
+Reactome,databases,"Enzyme And Pathway Databases",xref_reactome
+SABIO-RK,databases,"Enzyme And Pathway Databases",xref_sabio-rk
+SIGNOR,databases,"Enzyme And Pathway Databases",xref_signor
+SignaLink,databases,"Enzyme And Pathway Databases",xref_signalink
+UniPathway,databases,"Enzyme And Pathway Databases",xref_unipathway
+BioGRID-ORCS,databases,"Miscellaneous Databases",xref_biogrid-orcs
+ChiTaRS,databases,"Miscellaneous Databases",xref_chitars
+EvolutionaryTrace,databases,"Miscellaneous Databases",xref_evolutionarytrace
+GeneWiki,databases,"Miscellaneous Databases",xref_genewiki
+GenomeRNAi,databases,"Miscellaneous Databases",xref_genomernai
+PHI-base,databases,"Miscellaneous Databases",xref_phi-base
+PRO,databases,"Miscellaneous Databases",xref_pro
+Pharos,databases,"Miscellaneous Databases",xref_pharos
+RNAct,databases,"Miscellaneous Databases",xref_rnact
+Bgee,databases,"Gene Expression Databases",xref_bgee
+CleanEx,databases,"Gene Expression Databases",xref_cleanex
+CollecTF,databases,"Gene Expression Databases",xref_collectf
+ExpressionAtlas,databases,"Gene Expression Databases",xref_expressionatlas
+Genevisible,databases,"Gene Expression Databases",xref_genevisible
+CDD,databases,"Family And Domain Databases",xref_cdd
+DisProt,databases,"Family And Domain Databases",xref_disprot
+Gene3D,databases,"Family And Domain Databases",xref_gene3d
+HAMAP,databases,"Family And Domain Databases",xref_hamap
+IDEAL,databases,"Family And Domain Databases",xref_ideal
+InterPro,databases,"Family And Domain Databases",xref_interpro
+PANTHER,databases,"Family And Domain Databases",xref_panther
+PIRSF,databases,"Family And Domain Databases",xref_pirsf
+PRINTS,databases,"Family And Domain Databases",xref_prints
+PROSITE,databases,"Family And Domain Databases",xref_prosite
+Pfam,databases,"Family And Domain Databases",xref_pfam
+ProDom,databases,"Family And Domain Databases",xref_prodom
+SFLD,databases,"Family And Domain Databases",xref_sfld
+SMART,databases,"Family And Domain Databases",xref_smart
+SUPFAM,databases,"Family And Domain Databases",xref_supfam
+TIGRFAMs,databases,"Family And Domain Databases",xref_tigrfams

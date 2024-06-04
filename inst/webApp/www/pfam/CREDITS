@@ -1,0 +1,14 @@
+The image generator, incorporated within ProToDeviser, is not created by
+the ProToDeviseR authors. It is the Custom domains graphics generator
+tool from the old, decomissioned Pfam web-site.
+
+The modifications we did were: 
+  * trimming down the index.html page
+  * fixing broken links to domains description in the metadata
+  * add the ability to change residue pixel size (domain_graphics.js),
+    modify motif opacity, and fix X and Y scaling values to be the same
+    (graphic_generator.js)
+
+The different image generator components are lincensed under Apache-2,
+CC-ND 3.0, GPLv2 (with permission to be used with future versions of the
+license) and MIT.
