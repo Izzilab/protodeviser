@@ -37,7 +37,7 @@ Supported formats are:
 * tab-separated values (TSV) text file 
 * comma-separated values (CSV) text file 
 
-The **keywords** used by ProToDeviseR to classify regions, motifs and markups are [listed here](./keywords.html).
+The **keywords** used by ProToDeviseR to classify regions, motifs and markups are [listed here](./keywords.txt).
 
 ## Output 
 ### Table preview
