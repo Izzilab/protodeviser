@@ -1,0 +1,78 @@
+Keywords list
+=============
+
+Domains
+-------
+There are no keywords associated with domains' colouring and shapes,
+except for repeats. Large domains have pointed edges ("arrow" style),
+medium sized domains have curved edges and short domains have straight.
+
+Motifs
+------
+activity_regulation ... co-factor, active site, catalytic activity, activity regulation, activity  
+charged_polar_reg ..... basic, acidic, charged, polar  
+cleavage .............. cleave, cleavage  
+coiled_coil ........... coiled coil  
+degradation ........... degrad, degron, destruct  
+disordered_region ..... disorder  
+disor_region_bind ..... disorder bind  
+docking_ligand ........ ligand, bind, docking, interact  
+glycosylation ......... glycosaminoglycan, mucopolysaccharide, O-fucos, C-mannos, N-glyc, O-glyc, glycosylation  
+lipidation ............ prenyl, isopren, farnes, geranyl, dolichol, caax, acylat, myrist, palmit, gpi, glycosylphosphatidylinositol, phosphoethanolamine, lipid  
+low_complexity ........ low complex  
+nuclear_related ....... nucleus, nuclear import/localization, nuclear export/localization, zink finger, dna  
+phosphorylation ....... ser, thr, tyr, phospho, kinase  
+signal_peptide ........ signal, signal peptide  
+targeting ............. sumo, absorb, absorption sort, target  
+transmembrane ......... trans-membrane  
+other ................. anything else
+
+Markups
+-------
+absorption ............ absorption, absorb  
+acetylation ........... acetyl  
+active_site ........... activ site  
+activity_regulation ... activ regulat  
+acylated .............. acylat, myrist, palmit  
+amidation ............. amide, amidation  
+binding_site .......... bind  
+catalytic_activity .... catal activ  
+cleavage .............. cleave, cleavage  
+C_mannosylation ....... C-mannos  
+cofactor .............. co-factor  
+cross_link ............ cross-link  
+degradation ........... degrad, destruct, degron  
+diSulfide_bridge ...... disulf  
+dna_binding ........... dna bind  
+docking ............... docking  
+flavin_binding ........ flavin, flavo, fmn, fad  
+glycosaminoglycan ..... glycosaminoglycan  
+glycosylation ......... glycosylation, mucopolysaccharide  
+gpi ................... gpi, glycosylphosphatidylinositol, phosphoethanolamine  
+hydroxylation ......... hydroxylation, hydroxy proline/lysine/phenylalanine/arginine/asparagine/aspartate  
+interacts_with ........ interact  
+isomerization ......... isomerization, D-  
+ligand_binding ........ ligand bind  
+ligand_site ........... ligand  
+lipidation ............ lipid  
+methylation ........... methyl  
+N_glycosylation ....... N-glyc  
+nuclear_export ........ nucleus/nuclear export  
+nuclear_import ........ nucleus/nuclear import/localization  
+nuclear_receptor ...... nucleus/nuclear receptor  
+nuclear_related ....... nucleus, nuclear  
+O_fucosylation ........ O-fucos  
+O_glycosylation ....... O-glyc, O-GalNAc, O-mucin  
+phosphorylation ....... phosphorylation  
+PhosphoSerine ......... Ser-phospho, Ser-kinase  
+PhosphoThreonine ...... Thr-phospho, Thr-kinase  
+PhosphoTyrosine ....... Tyr-phospho, Tyr-kinase  
+prenylated ............ prenyl, isopren, farnes, geranyl, dolichol, caax  
+pyrrolidone ........... pyrrolidone, pyroglutamic, pyroglutamate  
+retaining ............. retain  
+sorting ............... sort  
+sulfation ............. sulfation, sulphotyr, sulphothr, sulphoser  
+sumo .................. sumo  
+targeting ............. target  
+ubiquitin ............. ubiquitin  
+other ................. anything else  
