@@ -1,7 +1,9 @@
 # ProToDeviseR
-[Help](./inst/webApp/www/help.md) :: [About](./inst/webApp/www/about.md)
+[Help](./inst/webApp/www/help.md) :: [Test dataset](./inst/webApp/www/cd45/) :: [About](./inst/webApp/www/about.md)
 
 The **Pro**tein **To**pology **Devise**r is an **R** package for the automatic generation of protein topology code in JSON format. The code can be easily rendered into a graph, by Pfam's custom-domains generator. This excellent tool is **not** developed by us, but is embedded with the program for users' convenience. A table summary is also prepared. 
+
+**This is the R package of ProToDeviseR, which can be installed locally. If you are looking for the online version of the program (which requires no installation), visit [https://matrinet.shinyapps.io/ProToDeviser/](https://matrinet.shinyapps.io/ProToDeviser/).**  
 
 ProToDeviseR features a fully functional graphical **user interface** (UI), implemented in R Shiny:
 
