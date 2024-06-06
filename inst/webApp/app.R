@@ -2,6 +2,7 @@
 # ProToDeviser: ShinyApp UI
 #
 
+library("markdown")
 library("shiny")
 library("shinyBS")
 library("rclipboard")
