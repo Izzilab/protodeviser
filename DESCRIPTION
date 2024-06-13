@@ -1,6 +1,6 @@
 Package: protodeviser
 Title: Protein Topology Deviser
-Version: 0.9.7
+Version: 0.9.8
 Description: Create concise protein topology schemes
 Author: Petar Petrov & Valerio Izzi
 Authors@R: c(
@@ -30,4 +30,3 @@ Imports:
     shiny,
     shinyBS,
     tibble
-
