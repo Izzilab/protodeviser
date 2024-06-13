@@ -176,17 +176,17 @@ ui <- fluidPage(title = "ProToDeviseR",
                                                                       label = span("Score", popify(el = img(src="icons/help.png"), title = "Score threshold", content = "ELM conservation scores cutoff (0-1).", placement = "right")),
                                                                       min = 0, max = 1, step = 0.1, value = 0.5)),
 
-                                               # IUPred3/ANCHOR2
+                                               # ANCHOR2
                                                column(9, fileInput(inputId = "tab3_ANCHOR.tsv_file_in",
-                                                                   label = span("IUPred3/ANCHOR2",
-                                                                                popify(el = img(src="icons/help.png"), title = "IUPred3/ANCHOR2 results", content = "Upload IUPred3/ANCHOR2 data. File should be tab-separated text (.tsv).", placement = "top"),
+                                                                   label = span("Anchor2",
+                                                                                popify(el = img(src="icons/help.png"), title = "Anchor2 results", content = "Upload Anchor2 data. File should be tab-separated text (.tsv).", placement = "top"),
                                                                                 tags$a(href="cd45/cd45_IUPred3.tsv", tipify(el = img(src="icons/attachment.png"), title = "Click to download example", placement = "top")),
-                                                                                tags$a(href="https://iupred.elte.hu/", target="_blank", tipify(el = img(src="icons/link.png"), title = "Visit IUPred 3 / Anchor 2.", placement = "top"))),
+                                                                                tags$a(href="https://iupred.elte.hu/", target="_blank", tipify(el = img(src="icons/link.png"), title = "Visit Anchor 2.", placement = "top"))),
                                                                    multiple = FALSE,
                                                                    accept = c(".tsv"))
                                                ),
                                                column(3, numericInput(inputId = "tab3_ANCHOR.cutoff_in",
-                                                                      label = span("Score", popify(el = img(src="icons/help.png"), title = "Score threshold", content = "IUPred3/ANCHOR2 score cutoff (0-1).", placement = "right")),
+                                                                      label = span("Score", popify(el = img(src="icons/help.png"), title = "Score threshold", content = "Disorder and Anchor2 score cutoff (0-1).", placement = "right")),
                                                                       min = 0, max = 1, step = 0.1, value = 0.8)),
 
                                                # NetNGlyc
@@ -640,7 +640,7 @@ server <- function(input, output, session){
                            strong("Species:"), input$tab3_species_in, "[taxid:", input$tab3_taxid_in, "]", br(),
                            strong("Link:"), input$tab3_link_in, br(),
                            strong("ELM conservation score:"), input$tab3_ELM.score_in, br(),
-                           strong("IUPred/Anchor cutoff:"), input$tab3_ELM.score_in, br(),
+                           strong("Disorder and Anchor2 cutoff:"), input$tab3_ELM.score_in, br(),
                            strong("NetNGlyc cutoff:"), input$tab3_netNglyc.cutoff_in, br(),
                            strong("NetOGlyc cutoff:"), input$tab3_netOglyc.cutoff_in, br(),
                            strong("NetPhos cutoff:"), input$tab3_netPhos.cutoff_in, br(),
