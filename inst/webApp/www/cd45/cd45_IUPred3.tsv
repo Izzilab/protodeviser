@@ -1,11 +1,3 @@
-# IUPred3 - improved prediction of protein disorder with a focus on specific user applications 
-# Gábor Erdős, Mátyás Pajkos, Zsuzsanna Dosztányi
-# Nucleic Acids Research 2021, Submitted
-# IUPred2A: context-dependent prediction of protein disorder as a function of redox state and protein binding
-# Balint Meszaros, Gabor Erdos, Zsuzsanna Dosztanyi
-# Nucleic Acids Research 2018;46(W1):W329-W337.
-# IUPred2 type: long
-# POS	AMINO ACID	IUPRED SCORE	ANCHOR SCORE	EXP DIS
 1	M	0.0272	0.3090	?
 2	T	0.0137	0.3264	?
 3	M	0.0105	0.3440	?
