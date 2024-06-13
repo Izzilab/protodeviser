@@ -1146,10 +1146,13 @@ process.ELM <- function(elm.xlsx = NULL, elm.scores = NULL, cutoff = 0.5){
   }
 }
 
-# Process UIPred3/ANCHOR2 results
+# Process AIUPred/ANCHOR2, or UIPred3/ANCHOR2 results
 process.ANCHOR <- function(anchor.tsv = NULL, cutoff = 0.5){
-  anchor <- read.table(anchor.tsv, skip = 8, header = F)
-  colnames(anchor) <- c("Position", "Residue", "IUPred.score", "Anchor.score", "Exp.dis")
+  #anchor <- read.table(anchor.tsv, skip = 8, header = F)
+  anchor <- read.table(anchor.tsv, header = F)
+  anchor <- anchor[,1:4]
+  #colnames(anchor) <- c("Position", "Residue", "IUPred.score", "Anchor.score", "Exp.dis")
+  colnames(anchor) <- c("Position", "Residue", "Score", "Anchor.score")
   sub.an <- subset(anchor, anchor[, 3] > cutoff)
   sub.iu.an <- subset(sub.an, sub.an[, 4] > cutoff)
 
@@ -1170,7 +1173,7 @@ process.ANCHOR <- function(anchor.tsv = NULL, cutoff = 0.5){
                          description = "Intrinsically disordered binding site",
                          scoreName = "threshold",
                          score = paste(">", cutoff),
-                         database = "IUPred3..ANCHOR2",
+                         database = "ANCHOR",
                          accession = "N/A",
                          sequence = "N/A",
                          target = "N/A")
@@ -1384,8 +1387,8 @@ id.JSON <- function(input = NULL, database = NULL, offline = FALSE, regions.on =
 #' @param SCANSITE.score ScanSite scores cutoff
 #' @param SCANSITE.percentile ScanSite percentile cutoff
 #' @param SCANSITE.accessibility ScanSite accessibility cutoff
-#' @param ANCHOR.tsv IUPred/Anchor2 results file
-#' @param ANCHOR.cutoff IUPred/Anchor2 scores cutoff
+#' @param ANCHOR.tsv Anchor2 results file
+#' @param ANCHOR.cutoff Anchor2 scores cutoff
 #' @param netNglyc.tsv NetNGlyc results file
 #' @param netNglyc.cutoff NetNGlyc scores cutoff
 #' @param netOglyc.tsv NetOGlyc results file
