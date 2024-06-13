@@ -137,7 +137,7 @@ length.NCBI.gp <- function(gp = NULL){
 
 # Get length of the protein product from UniProt GFF3
 length.UniProt.gff <- function(gff = NULL){
-  #TODO: deal with multiple chains present
+  #TODO: deal with multiple chains present? At the moment we get the longest one.
   e <- gff
   e <- subset(e, e$type == "Chain")
   m <- which.max(unlist(subset(e, e$type == "Chain")[3]))
@@ -163,19 +163,26 @@ features.NCBI.gp <- function(gp = NULL){
   df.region <- data.frame()
   df.site <- data.frame()
 
-  df.region <- data.frame(type = entry.region$type,
-                   start = entry.region$start,
-                   end = entry.region$end,
-                   text = entry.region$region_name,
-                   description = paste0(entry.region$region_name , "|" , "note: ", entry.region$note),
-                   scoreName = "N/A",
-                   score = "N/A",
-                   database = "NCBI:GenPept",
-                   accession = entry.region$dbxref,
-                   sequence = "N/A",
-                   target = "N/A")
+  # Check if we got any regions features at all
+  if (nrow(entry.region) > 0) {
+    df.region <- data.frame(type = entry.region$type,
+                            start = entry.region$start,
+                            end = entry.region$end,
+                            text = entry.region$region_name,
+                            description = paste0(entry.region$region_name , "|" , "note: ", entry.region$note),
+                            scoreName = "N/A",
+                            score = "N/A",
+                            database = "NCBI:GenPept",
+                            accession = entry.region$dbxref,
+                            sequence = "N/A",
+                            target = "N/A")
+  }else{
+    df.region <- NULL
+  }
 
-  df.site <- data.frame(type = entry.site$type,
+  # Check if we got any sites features at all
+  if(nrow(entry.site) > 0){
+    df.site <- data.frame(type = entry.site$type,
                           start = entry.site$start,
                           end = entry.site$end,
                           text = entry.site$region_name,
@@ -186,6 +193,9 @@ features.NCBI.gp <- function(gp = NULL){
                           accession = entry.site$dbxref,
                           sequence = "N/A",
                           target = "N/A")
+  }else{
+    df.site <- NULL
+  }
 
   df <- rbind(df.region, df.site)
 
