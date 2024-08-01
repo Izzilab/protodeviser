@@ -27,6 +27,7 @@ libcurl-devel
 libxml2-devel
 fontconfig-devel
 harfbuzz-devel
+fribidi-devel
 freetype-devel
 libpng-devel
 libtiff-devel
@@ -35,7 +36,7 @@ libjpeg-devel
 
 ```bash
 # install with yum
-sudo yum install libcurl-devel libxml2-devel fontconfig-devel harfbuzz-devel freetype-devel libpng-devel libtiff-devel libjpeg-devel
+sudo yum install libcurl-devel libxml2-devel fontconfig-devel harfbuzz-devel fribidi-devel freetype-devel libpng-devel libtiff-devel libjpeg-devel
 
 ```
 
