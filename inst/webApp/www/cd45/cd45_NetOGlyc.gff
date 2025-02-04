@@ -1,8 +1,3 @@
-##gff-version 2
-##source-version NetOGlyc 4.0.0.13
-##date 24-3-20
-##Type Protein
-#seqname	source	feature	start	end	score	strand	frame	comment
 SP_P08575_PTPRC_HUMAN	netOGlyc-4.0.0.13	CARBOHYD	2	2	0.0682949	.	.	
 SP_P08575_PTPRC_HUMAN	netOGlyc-4.0.0.13	CARBOHYD	19	19	0.0241975	.	.	
 SP_P08575_PTPRC_HUMAN	netOGlyc-4.0.0.13	CARBOHYD	24	24	0.570621	.	.	#POSITIVE

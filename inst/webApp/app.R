@@ -6,8 +6,8 @@ library("markdown")
 library("shiny")
 library("shinyBS")
 library("rclipboard")
-#library("shinyjs")
 library("DT")
+library("shinybusy")
 
 # These are the databases we are using in Tab1
 dbs <- c("UniProt", "NCBI GenPept")
@@ -20,8 +20,31 @@ names(tbf) <- c("xlsx", "csv", "tsv")
 # find paths to markdown files
 www <- system.file("webApp/www", package = "protodeviser")
 
+# random string generator, shamelessly stolen (https://stackoverflow.com/a/62959890)
+randString <- function(characters=0, numbers=0, symbols=0, lowerCase=0, upperCase=0) {
+  ASCII <- NULL
+  if(symbols>0)    ASCII <- c(ASCII, sample(c(33:47, 58:34, 91:96, 123:126), symbols))
+  if(numbers>0)    ASCII <- c(ASCII, sample(48:57, numbers))
+  if(upperCase>0)  ASCII <- c(ASCII, sample(65:90, upperCase))
+  if(lowerCase>0)  ASCII <- c(ASCII, sample(97:122, lowerCase))
+  if(characters>0) ASCII <- c(ASCII, sample(c(65:90, 97:122), characters))
+
+  return( rawToChar(as.raw(sample(ASCII, length(ASCII)))) )
+}
+
+# Make a unique name per user/session of index.html. This does not work as a
+# temp file, because the browser does not interpret the file path properly.
+# We tried...
+randomstring <- randString(characters=0, numbers=7, lowerCase = 10)
+index.html <- paste0(randomstring, "-index.html")
+
+
 # GUI ----
 ui <- fluidPage(title = "ProToDeviseR",
+
+                # Set font to Arial
+                tags$head(tags$style(HTML('* {font-family: "Arial"};'))),
+
                 # needed for custom download icons
                 # (https://stackoverflow.com/questions/76554101/r-shiny-change-download-button-image)
                 tags$head(tags$link(href="icon.css", rel="stylesheet")),
@@ -39,9 +62,7 @@ ui <- fluidPage(title = "ProToDeviseR",
 
                     hr(),
 
-                    # DO WE WANT A REFRESH BUTTON? I think we do. However, no need of shinyjs to implement it
-                    #shinyjs::useShinyjs(),
-                    #shinyjs::extendShinyjs(text = "shinyjs.refresh_page = function() { location.reload(); }", functions = "refresh_page"),
+                    # Refresh button
                     div(actionButton("refresh", "", icon = tags$i(class = "clear")), style="position:relative; float: right"),
                     bsTooltip(id = "refresh", title = "Reset all input/output", placement = "right"),
 
@@ -83,6 +104,23 @@ ui <- fluidPage(title = "ProToDeviseR",
                                                             selected = c("regions", "motifs", "markups"),
                                                             inline = T),
 
+                                         # https://stackoverflow.com/a/61045908
+                                         selectInput(inputId = "colours",
+                                                     label = span("Select colour palette for regions:",
+                                                                  popify(el = img(src="icons/help.png"), title = "Colour palette", content = "Specify the colour palette (scheme) to be used for regions", placement = "top")),
+                                                     choices = c("rainbow",
+                                                                 "heat",
+                                                                 "cyan-magenta",
+                                                                 "viridis",
+                                                                 "magma",
+                                                                 "plasma",
+                                                                 "inferno",
+                                                                 "cividis",
+                                                                 "mako",
+                                                                 "rocket",
+                                                                 "turbo"),
+                                                     ),
+
                                          # Click to submit
                                          actionButton(inputId = "tab1_submit",
                                                       label = "Submit",
@@ -94,7 +132,7 @@ ui <- fluidPage(title = "ProToDeviseR",
                                          value = "tab3", icon = tags$img(src='icons/features.png'),
                                          h3("Provide features of your protein"),
                                          br(),
-                                         p("Protein name should not be left blank. Protein length", strong("must"), "be specified."),
+                                         p("Protein name should not be left blank and protein length", strong("must"), "be specified."),
                                          hr(),
 
                                          # Name and length input boxes
@@ -102,7 +140,7 @@ ui <- fluidPage(title = "ProToDeviseR",
                                            column(6, textInput(inputId = "tab3_description_in",
                                                                label = span("Name",
                                                                             popify(el = img(src="icons/help.png"), title = "Protein name", content = "A human-readable name, e.g. CD45, PTPRC, PTPRC_HUMAN. Or, leave as Unknown.", placement = "top")),
-                                                               value = "protein"),
+                                                               value = "Protein"),
                                            ),
                                            column(6, numericInput(inputId = "tab3_length_in",
                                                                   label = span("Length",
@@ -252,7 +290,21 @@ ui <- fluidPage(title = "ProToDeviseR",
                                                )
                                              ),
                                              hr(),
-
+                                             selectInput(inputId = "colours",
+                                                         label = span("Select colour palette for regions:",
+                                                                      popify(el = img(src="icons/help.png"), title = "Colour palette", content = "Specify the colour palette (scheme) to be used for regions", placement = "top")),
+                                                         choices = c("rainbow",
+                                                                     "heat",
+                                                                     "cyan-magenta",
+                                                                     "viridis",
+                                                                     "magma",
+                                                                     "plasma",
+                                                                     "inferno",
+                                                                     "cividis",
+                                                                     "mako",
+                                                                     "rocket",
+                                                                     "turbo"),
+                                             ),
                                              # Click to submit
                                              actionButton(inputId = "tab3_submit",
                                                           label = "Submit",
@@ -282,7 +334,21 @@ ui <- fluidPage(title = "ProToDeviseR",
                                                                  selected = "xlsx",
                                                                  inline = F),
                                                     hr(),
-
+                                                    selectInput(inputId = "colours",
+                                                                label = span("Select colour palette for regions:",
+                                                                             popify(el = img(src="icons/help.png"), title = "Colour palette", content = "Specify the colour palette (scheme) to be used for regions", placement = "top")),
+                                                                choices = c("rainbow",
+                                                                            "heat",
+                                                                            "cyan-magenta",
+                                                                            "viridis",
+                                                                            "magma",
+                                                                            "plasma",
+                                                                            "inferno",
+                                                                            "cividis",
+                                                                            "mako",
+                                                                            "rocket",
+                                                                            "turbo"),
+                                                    ),
                                                     # Click to submit (table and box input)
                                                     actionButton(inputId = "tab2_submit",
                                                                  label = "Submit",
@@ -295,38 +361,30 @@ ui <- fluidPage(title = "ProToDeviseR",
 
                   # Output panel ----
                   mainPanel(
-                    tabsetPanel(selected = "out1",
-                                tabPanel(title = strong("Table preview"),
-                                         div(htmlOutput(outputId = "current_protein_table")),
-                                         value = "out1", icon = tags$img(src='icons/spreadsheet.svg',  height='48', width='48'),
-                                         uiOutput(outputId = "download_xlsx"),
+                    tabsetPanel(selected = "out3",
+                                tabPanel(title = strong("Image generator"),
                                          br(),
-                                         #div(tableOutput(outputId = "table_out"), style = "max-height: 96vh; overflow-y: auto;")
-                                         # use the more sophisticated table from DT?
-
-                                         #dataTableOutput()` is deprecated as of shiny 1.8.1.
-                                         #dataTableOutput("table_out")
-                                         DTOutput("table_out")
-                                ),
-                                tabPanel(title = strong("JSON output"),
-                                         div(htmlOutput(outputId = "current_protein_json")),
+                                         div(htmlOutput(outputId = "current_protein_table")),
+                                         value = "out3", icon = tags$img(src='icons/image_generator.svg',  height='48', width='48'),
                                          rclipboardSetup(),
-                                         value = "out2", icon = tags$img(src='icons/text.svg',  height='48', width='48'),
+                                         br(),
                                          uiOutput(outputId = "download_json", style = 'display: inline-block;'),
                                          uiOutput(outputId = "clip", style = 'display: inline-block;'),
-                                         bsTooltip(id = "clip", title = "You can paste clipboard contents in the Image generator tab"),
-                                         br(),br(),
-
-                                         div(verbatimTextOutput(outputId = "json_out", placeholder = F),
-                                             style = "max-height: 72vh; overflow-y: auto;"),
-                                         br()
-                                         # use codeoutput?
-                                         # div(codeOutput("json_out"),
-                                         #     style = "max-height: 96vh; overflow-y: auto;"),
+                                         uiOutput(outputId = "download_xlsx", style = 'display: inline-block;'),
+                                         bsTooltip(id = "download_json", title = "Download generated JSON code."),
+                                         bsTooltip(id = "clip", title = "Copy the generated JSON code to clipboard."),
+                                         bsTooltip(id = "download_xlsx", title = "Download protein features as a table."),
+                                         br(),
+                                         div(htmlOutput(outputId = "pfam_embedded"))
                                 ),
-                                tabPanel(title = strong("Image generator"),
-                                         value = "out3", icon = tags$img(src='icons/image_generator.svg',  height='48', width='48'),
-                                         htmlOutput(outputId = "pfam_embedded")
+                                tabPanel(title = strong("Table"),
+                                         value = "out1", icon = tags$img(src='icons/spreadsheet.svg',  height='48', width='48'),
+                                         br(),br(),
+                                         DTOutput("table_out")
+                                ),
+                                tabPanel(title = "Legend",
+                                         value = "legend", icon = tags$img(src='icons/legend.svg',  height='48', width='48'),
+                                         htmltools::includeMarkdown(paste0(www, "/","legend.md"))
                                 ),
                                 tabPanel(title = "Help",
                                          value = "help", icon = tags$img(src='icons/help-browser.svg',  height='48', width='48'),
@@ -351,6 +409,21 @@ server <- function(input, output, session){
   tab_json <- reactiveValues(y=NULL)
   tab_protein <- reactiveValues(z=NULL)
 
+  # JSON box to be dynamically updated
+  json_box <- reactiveValues(j=NULL)
+
+
+  #spinner modal to block graph tabs at submission
+  observeEvent(input$tab1_submit, {
+    show_modal_spinner(
+      spin = "spring",
+      color = "darkgreen",
+      text = "running topology analysis..."
+    )
+    req(tab1_table())
+    remove_modal_spinner()
+  })
+
   #
   # Tab1 ----
   #
@@ -364,23 +437,6 @@ server <- function(input, output, session){
     }
   })
 
-  # # create JSON and render as text. Decide what to include from the checkbox.
-  # tab1_process <- eventReactive(input$tab1_submit, {
-  #   if (!is.null(input$tab1_radio_button)) {
-  #     id.JSON(input = input$tab1_text_in,
-  #             database = input$tab1_radio_button,
-  #             regions.on = is.element("regions", input$tab1_checkbox),
-  #             motifs.on = is.element("motifs", input$tab1_checkbox),
-  #             markups.on = is.element("markups", input$tab1_checkbox))
-  #   }else{
-  #     id.JSON(input = input$tab1_text_in,
-  #             database = input$tab1_radio_button,
-  #             regions.on = F,
-  #             motifs.on = F,
-  #             markups.on = F)
-  #   }
-  #
-  # })
 
   tab1_process <- eventReactive(input$tab1_submit, {
     if (inherits(try(
@@ -389,13 +445,15 @@ server <- function(input, output, session){
                 database = input$tab1_radio_button,
                 regions.on = is.element("regions", input$tab1_checkbox),
                 motifs.on = is.element("motifs", input$tab1_checkbox),
-                markups.on = is.element("markups", input$tab1_checkbox))
+                markups.on = is.element("markups", input$tab1_checkbox),
+                gradient = input$colours)
       }else{
         id.JSON(input = input$tab1_text_in,
                 database = input$tab1_radio_button,
                 regions.on = F,
                 motifs.on = F,
-                markups.on = F)
+                markups.on = F,
+                gradient = input$colours)
       }
     ), 'try-error')) {
       showNotification("ID not found at database.", type = "error")
@@ -407,13 +465,15 @@ server <- function(input, output, session){
                 database = input$tab1_radio_button,
                 regions.on = is.element("regions", input$tab1_checkbox),
                 motifs.on = is.element("motifs", input$tab1_checkbox),
-                markups.on = is.element("markups", input$tab1_checkbox))
+                markups.on = is.element("markups", input$tab1_checkbox),
+                gradient = input$colours)
       }else{
         id.JSON(input = input$tab1_text_in,
                 database = input$tab1_radio_button,
                 regions.on = F,
                 motifs.on = F,
-                markups.on = F)
+                markups.on = F,
+                gradient = input$colours)
       }
     }
   })
@@ -451,21 +511,15 @@ server <- function(input, output, session){
   # report what's in the output, but only upon click
   observeEvent(input$tab1_submit, {
     if (input$tab1_radio_button == "ncbi") {
-      tab_protein$z <- paste(br(), img(src="icons/id.png"), strong("Protein ID"), br(),br(),
-                             strong("Identifier:"), toupper(gsub(" ", "", input$tab1_text_in)), br(),
-                             strong("Database:"), dbs[input$tab1_radio_button], br(),
-                             strong("Length:"), tab1_length(), "(aa)", br(),
-                             strong("Description:"), tab1_description(), br(),
-                             strong("Species:"), tab1_organism(), "[taxid:", tab1_taxid(), "]", br(),
-                             strong("Link:"), tags$a(href=tab1_url(), tab1_url()), hr()
+      tab_protein$z <- paste0(br(), img(src="icons/id.png"), strong("Protein ID"), br(),br(),
+                             "Protein ", tags$a(href=tab1_url(), tab1_description(), target="_blank"), " (", tab1_organism(), " [taxid:", tab1_taxid(), "]", ")", ", of length ", tab1_length(), " (aa), with " , dbs[input$tab1_radio_button], " identifier ", toupper(gsub(" ", "", input$tab1_text_in)),
+                             ". To view protein features as a dynamic table, use the tab to the right."
       )
     }else{
-      tab_protein$z <- paste(br(), img(src="icons/id.png"), strong("Protein ID"), br(),br(),
-                             strong("Identifier:"), toupper(gsub(" ", "", input$tab1_text_in)), br(),
-                             strong("Database:"), dbs[input$tab1_radio_button], br(),
-                             strong("Length:"), tab1_length(), "(aa)", br(),
-                             strong("Description:"), tab1_description(), br(),
-                             strong("Link:"), tags$a(href=tab1_url(), tab1_url()), hr()
+      tab_protein$z <- paste0(br(), img(src="icons/id.png"), strong("Protein ID"), br(),br(),
+                             #strong("Summary:"), br(),
+                             "Protein ", tags$a(href=tab1_url(), tab1_description(), target="_blank"), ", of length ", tab1_length(), " (aa), with " , dbs[input$tab1_radio_button], " identifier ", toupper(gsub(" ", "", input$tab1_text_in)),
+                             ". To view protein features as a dynamic table, use the tab to the right."
       )
     }
   })
@@ -484,6 +538,7 @@ server <- function(input, output, session){
     tab_json$y <- tab1_json()
   })
 
+
   # Process input table upon tab2_submit click
   tab2_json_process <- eventReactive(input$tab2_submit, {
     if (inherits(try(
@@ -494,7 +549,8 @@ server <- function(input, output, session){
                 link.url = input$tab3_link_in,
                 taxid = input$tab3_taxid_in,
                 input.file = input$tab2_file_in$datapath,
-                input.format = input$tab2_file_format)
+                input.format = input$tab2_file_format,
+                gradient = input$colours)
     ), 'try-error')) {
       showNotification("Check input file or protein length.", type = "error")
       #print('{"metadata": [], "length": [] }')
@@ -506,7 +562,8 @@ server <- function(input, output, session){
                   link.url = input$tab3_link_in,
                   taxid = input$tab3_taxid_in,
                   input.file = input$tab2_file_in$datapath,
-                  input.format = input$tab2_file_format)
+                  input.format = input$tab2_file_format,
+                  gradient = input$colours)
     }
   })
 
@@ -541,12 +598,9 @@ server <- function(input, output, session){
 
   # report what's in the output, but only upon click
   observeEvent(input$tab2_submit, {
-    tab_protein$z <- paste(br(), img(src="icons/features.png"), strong("Protein features"), strong("→"), img(src="icons/predefined.png"), strong("Predefined (curated table)"), br(),br(),
-                           strong("Name:"), input$tab3_description_in, br(),
-                           strong("Provided length:"), input$tab3_length_in, "(aa)", br(),
-                           strong("Accession:"), input$tab3_accession_in, br(),
-                           strong("Species:"), input$tab3_species_in, "[taxid:", input$tab3_taxid_in, "]", br(),
-                           strong("Link:"), input$tab3_link_in, hr()
+    tab_protein$z <- paste0(br(), img(src="icons/features.png"), strong("Protein features"), strong("→"), img(src="icons/predefined.png"), strong("Predefined (curated table)"), br(),br(),
+                           input$tab3_description_in, ", of provided length ", input$tab3_length_in, " (aa).",
+                           " To view protein features as a dynamic table, use the tab to the right."
     )
   })
 
@@ -573,7 +627,8 @@ server <- function(input, output, session){
                      netOglyc.tsv = input$tab3_netOglyc.tsv_file_in$datapath,
                      netOglyc.cutoff = input$tab3_netOglyc.cutoff_in,
                      netPhos.tsv = input$tab3_netPhos.tsv_file_in$datapath,
-                     netPhos.cutoff = input$tab3_netPhos.cutoff_in)
+                     netPhos.cutoff = input$tab3_netPhos.cutoff_in,
+                     gradient = input$colours)
     ), 'try-error')) {
       showNotification("Check input file or protein length.", type = "error")
       #print('{"metadata": [], "length": [1] }')
@@ -599,7 +654,8 @@ server <- function(input, output, session){
                    netOglyc.tsv = input$tab3_netOglyc.tsv_file_in$datapath,
                    netOglyc.cutoff = input$tab3_netOglyc.cutoff_in,
                    netPhos.tsv = input$tab3_netPhos.tsv_file_in$datapath,
-                   netPhos.cutoff = input$tab3_netPhos.cutoff_in)
+                   netPhos.cutoff = input$tab3_netPhos.cutoff_in,
+                   gradient = input$colours)
     }
   })
 
@@ -633,19 +689,9 @@ server <- function(input, output, session){
 
   # report what's in the output, but only upon click
   observeEvent(input$tab3_submit, {
-    tab_protein$z <- paste(br(), img(src="icons/features.png"), strong("Protein features"), strong("→"), img(src="icons/predicted.png"), strong("Predicted (raw results)"), br(),br(),
-                           strong("Name:"), input$tab3_description_in, br(),
-                           strong("Length:"), input$tab3_length_in, "(aa)", br(),
-                           strong("Accession:"), input$tab3_accession_in, br(),
-                           strong("Species:"), input$tab3_species_in, "[taxid:", input$tab3_taxid_in, "]", br(),
-                           strong("Link:"), input$tab3_link_in, br(),
-                           strong("ELM conservation score:"), input$tab3_ELM.score_in, br(),
-                           strong("Disorder and Anchor2 cutoff:"), input$tab3_ELM.score_in, br(),
-                           strong("NetNGlyc cutoff:"), input$tab3_netNglyc.cutoff_in, br(),
-                           strong("NetOGlyc cutoff:"), input$tab3_netOglyc.cutoff_in, br(),
-                           strong("NetPhos cutoff:"), input$tab3_netPhos.cutoff_in, br(),
-                           strong("ScanSite;"), strong("score:"), input$tab3_SCANSITE.score_in, strong("percentile:"), input$tab3_SCANSITE.percentile_in, strong("accessibility:"), input$tab3_SCANSITE.accessibility_in,
-                           hr()
+    tab_protein$z <- paste0(br(), img(src="icons/features.png"), strong("Protein features"), strong("→"), img(src="icons/predicted.png"), strong("Predicted (raw results)"), br(),br(),
+                           input$tab3_description_in, ", of provided length ", input$tab3_length_in, " (aa).",
+                           " To view protein features as a dynamic table, use the tab to the right."
     )
   })
 
@@ -654,10 +700,8 @@ server <- function(input, output, session){
   #
 
   # table preview
-  # output$table_out <- renderTable({
-  #   tab_table$x}, striped = T, hover = T, na = "N/A")
   output$table_out <- renderDT(tab_table$x,
-                               options = list(scrollX = TRUE, iDisplayLength = 25))
+                               options = list(scrollX = TRUE, iDisplayLength = 10))
   # json preview
   output$json_out <- renderText({
     tab_json$y})
@@ -701,12 +745,9 @@ server <- function(input, output, session){
     if (!is.null(tab_json$y)) {
       rclipButton(
         inputId = "clipbtn",
-        label = "Copy code box contents to clipboard",
+        label = "",
         clipText = tab_json$y,
         icon = tags$i(class = "clipboard"),
-        #tooltip = "Copy JSON contents to clipboard",
-        #placement = "top",
-        #options = list(delay = list(show = 800, hide = 100), trigger = "hover")
       )
     }
 
@@ -716,29 +757,103 @@ server <- function(input, output, session){
   # iFrame for PFAM----
   #
 
-  # Submit generated JSON
+  observeEvent(input$tab1_submit, {
+    index.head <- readLines("www/pfam/stock/index_head.html", n=83)
+    index.tail <- readLines("www/pfam/stock/index_tail.html")
+    area.begin <- '<textarea cols="96" rows="24" id="seq">'
+    area.close <- '</textarea>'
+    index.json <- tab_json$y
+    writeLines(c(index.head, area.begin, index.json, area.close, index.tail), paste0("www/pfam/", index.html))
+  })
+
+  observeEvent(input$tab2_submit, {
+    index.head <- readLines("www/pfam/stock/index_head.html", n=83)
+    index.tail <- readLines("www/pfam/stock/index_tail.html")
+    area.begin <- '<textarea cols="96" rows="24" id="seq">'
+    area.close <- '</textarea>'
+    index.json <- tab_json$y
+    writeLines(c(index.head, area.begin, index.json, area.close, index.tail), paste0("www/pfam/", index.html))
+  })
+
+  observeEvent(input$tab3_submit, {
+    index.head <- readLines("www/pfam/stock/index_head.html", n=83)
+    index.tail <- readLines("www/pfam/stock/index_tail.html")
+    area.begin <- '<textarea cols="96" rows="24" id="seq">'
+    area.close <- '</textarea>'
+    index.json <- tab_json$y
+    writeLines(c(index.head, area.begin, index.json, area.close, index.tail), paste0("www/pfam/", index.html))
+  })
+
+
+  # reload the pham page upon button click
+  observeEvent(input$tab1_submit, {
+    json_box$j <- tags$iframe(seamless="seamless",
+                                  #src = "pfam/index.html",
+                                  src = paste0("pfam/", index.html),
+                                  width="100%",
+                                  height=1024,
+                                  frameborder = "no")
+  })
+
+  observeEvent(input$tab2_submit, {
+    json_box$j <- tags$iframe(seamless="seamless",
+                              #src = "pfam/index.html",
+                              src = paste0("pfam/", index.html),
+                              width="100%",
+                              height=1024,
+                              frameborder = "no")
+  })
+
+  observeEvent(input$tab3_submit, {
+    json_box$j <- tags$iframe(seamless="seamless",
+                              #src = "pfam/index.html",
+                              src = paste0("pfam/", index.html),
+                              width="100%",
+                              height=1024,
+                              frameborder = "no")
+  })
+
+  # have this appear by default... someone may use the program just to generate
+  # their own schemes
   output$pfam_embedded <- renderUI({
     tags$iframe(seamless="seamless",
-                src = "pfam/index.html",
-                width="100%",
-                height=1024,
-                frameborder = "no")
+                              src = "pfam/index.html",
+                              width="100%",
+                              height=1024,
+                              frameborder = "no")
   })
+
+  observeEvent(input$tab1_submit, {
+    output$pfam_embedded <- renderUI({
+      json_box$j
+    })
+  })
+
+  observeEvent(input$tab2_submit, {
+    output$pfam_embedded <- renderUI({
+      json_box$j
+    })
+  })
+
+  observeEvent(input$tab3_submit, {
+    output$pfam_embedded <- renderUI({
+      json_box$j
+    })
+  })
+
 
   observeEvent(input$refresh, {
-    # no need for js, use reload() instead
-    #shinyjs::js$refresh_page()
     session$reload()
-    #return()
   })
 
-  # # quit if browser (tab) is closed. Disable, since this crashes app upon f5 or browser refresh
-  # session$onSessionEnded(function(){
-  #   x <- isolate(input$refresh)
-  #   if(x == 0) {
-  #     stopApp()
-  #   }
-  # })
+  # clean up generated index.html by user
+  session$onSessionEnded(function() {
+    #unlink(fname)
+    fn <- paste0("www/pfam/", index.html)
+    if (file.exists(fn)) {
+      file.remove(fn)
+    }
+  })
 
 }
 

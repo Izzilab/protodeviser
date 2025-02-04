@@ -40,6 +40,17 @@ sudo yum install libcurl-devel libxml2-devel fontconfig-devel harfbuzz-devel fri
 
 ```
 
+### Installing ProToDeviseR system-wide, for all users
+If you want to install ProToDeviseR system-wide (not for your current user in ~/), for example to make a distribution-specific package, make sure that the `pfam` subfolder (exact path would depend on your distribution) is writeable by all, e.g.:
+
+```
+# owner still should be root
+chown root:root /usr/lib/R/library/protodeviser/webApp/www/pfam/
+
+# make it possible for everyone to read/write:
+chmod 777 /usr/lib/R/library/protodeviser/webApp/www/pfam/
+```
+
 ### Installing on CRUX
 I use [CRUX](https://crux.nu/) distribution of GNU/Linux. Installing **ProToDeviser** there is quite straightforward.
 

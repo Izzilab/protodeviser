@@ -1,5 +1,3 @@
-# Sequence		   # x   Context     Score   Kinase    Answer
-# -------------------------------------------------------------------
 # sp_P08575_PTPRC_HUMA     2 T   ---MTMYLW   0.467   DNAPK       . 
 # sp_P08575_PTPRC_HUMA     2 T   ---MTMYLW   0.427   GSK3        . 
 # sp_P08575_PTPRC_HUMA     2 T   ---MTMYLW   0.416   CaM-II      . 

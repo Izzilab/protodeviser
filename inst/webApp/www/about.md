@@ -1,16 +1,18 @@
 ### Authors 
+ProToDeviseR was created at [University of Oulu](https://www.oulu.fi/fi) (Finland).   
 Petar Petrov* (petar.petrov@oulu.fi)   
-Valerio Izzi** (valerio.izzi@oulu.fi) 
+Valerio Izzi** (valerio.izzi@oulu.fi)  
  
 ### Affiliations 
 *Infotech Institute, University of Oulu, FI-90014 Oulu, Finland.   
 **Faculty of Biochemistry and Molecular Medicine & Faculty of Medicine, BioIM Unit, University of Oulu, FI-90014 Oulu, Finland.   
  
-![](infotech.png) ![](logo.png) 
+[![](oulu.png)](https://www.oulu.fi/fi) [![](infotech.png)](https://www.oulu.fi/fi/yliopisto/tiedekunnat-ja-yksikot/infotech-oulu) [![](logo.png)](https://www.oulu.fi/en/research-groups/izzi-group) 
  
 ### Links 
-Petar Petrov on GitLab: https://gitlab.com/pebope   
-Izzi lab on GitHub: https://github.com/izzilab   
+ProToDeviseR code on GitHub: https://github.com/Izzilab/protodeviser  
+Izzi lab official repo on GitHub: https://github.com/izzilab   
+Petar Petrov work repo on GitLab: https://gitlab.com/pebope   
  
 ### License 
 ProToDeviseR is licensed under GPLv3.   

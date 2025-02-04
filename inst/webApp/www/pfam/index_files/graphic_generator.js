@@ -434,6 +434,16 @@ var GraphicGenerator = Class.create( {
     }.bind(this) );
     $("submit").observe( "click", this.generate.bind(this) );
     $("clear").observe( "click", this.clear.bind(this) );
+    
+    // add a button to paste contents of clipboard -petar
+    document.getElementById('pasteButton').addEventListener('click', async () => {
+    try {
+    const text = await navigator.clipboard.readText();
+    document.getElementById('seq').value = text;
+    } catch (err) {
+    console.error('Failed to read clipboard contents: ', err);
+    }
+    });
   },
 
   //----------------------------------------------------------------------------

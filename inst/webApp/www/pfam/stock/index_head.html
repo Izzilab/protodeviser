@@ -69,7 +69,7 @@
 <!--  <div id="sequence" class="panel">-->
 <div class="panel">
    <div class="row">
-   	<!--  <button id="pasteButton">Paste clipboard contents</button>-->
+   	<!-- <button id="pasteButton">Paste clipboard contents</button>-->
 	<button id="submit">Generate graphic from JSON code</button>
 	<button id="clear">Clear code box</button>
    </div>
@@ -79,33 +79,7 @@
 	<div id="error"></div>
    </div>
    
-   <h2>JSON code (right click and paste or use the button above):</h2>
+   <h2>JSON code (can be manually edited before graphics generation):</h2>
    <div class="panel-body">
    	<textarea cols="96" rows="24" id="seq"></textarea>
    </div>
-
-   <div class="row">
-   	<h3>Load examples:</h3>
-	<button id="small">Simple</button>
-   	<button id="large">Complex</button>
-   </div>
-</div>
-
-<script type="text/javascript">
-  // <![CDATA[
-
-  var generator;
-  document.observe( "dom:loaded", function() {
-    generator = new GraphicGenerator();
-  } );
-
-  // ]]>
-</script>
-
-<!-- end of content -->
-
-<script type="text/javascript">
-// <![CDATA[
-Event.observe( window, 'load', addHoverListeners, false );
-      // ]]>
-</script>
