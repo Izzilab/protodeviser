@@ -5,35 +5,37 @@ The **Pro**tein **To**pology **Devise**r is an **R** package for the automatic g
 
 [![Badge](https://img.shields.io/badge/ProtoDeViseR-@R_Shinyapps-blue)](https://matrinet.shinyapps.io/ProToDeviser/)
 [![Badge](https://img.shields.io/badge/Manuscript-bioRxiv-red)](https://doi.org/10.1101/2024.06.04.597333)
-[![Badge](https://img.shields.io/badge/Source-v_0.9.8-green)](https://github.com/Izzilab/protodeviser/releases/tag/0.9.8)
+[![Badge](https://img.shields.io/badge/Source-v_0.9.999-green)](https://github.com/Izzilab/protodeviser/releases/tag/0.9.999)
 
 This is the R package of ProToDeviseR, which can be installed locally. **If you are looking for the online version of the program (which requires no installation)**, visit [https://matrinet.shinyapps.io/ProToDeviser/](https://matrinet.shinyapps.io/ProToDeviser/). 
 
-ProToDeviseR features a fully functional graphical user interface (UI), implemented in R Shiny:
+ProToDeviseR features a fully functional graphical user interface (UI), implemented in R Shiny:  
 
-|Table preview|Generated JSON code|Image generator|
-|:-|:-:|-:|
-|![]( ./inst/webApp/www/screenshots/table.png)|![]( ./inst/webApp/www/screenshots/json.png)|![]( ./inst/webApp/www/screenshots/image.png)|
-
+![](./inst/webApp/www/screenshots/protodeviser.png)
+---
 As an **input**, you can use:
 * A UniProt identifier or an NCBI GenPept identifier.
 * Raw results from several online resources for protein topology prediction
 * A user-prepared table of protein topology annotations.
 
 As an **output**, you get:
-1. A table summary of protein features.
-2. JSON code of protein features, ready to be pasted in the *Image generator* tab.
+1. JSON code of protein features, ready to be processed into graphics in the *Image generator* tab.
+2. A table summary of protein features.  
 
 The protein features are classified as **regions**, **motifs** and **markups** (Figure 1). When searching with a database accession number (ID), all three are enabled by default:
 - [x] **Regions**: structured domains, repeats or other relatively long (usually, but not always), functional parts of the protein.
 - [x] **Motifs**: short liner motifs, disordered protein parts, signal peptides and transmembrane parts.
 - [x] **Markups**: single-amino acid targes, such as glycosylation, phosphorylation, active or binding site, etc.
 
+Different colour palettes for regions (domains) are provided, for users' preference.
+
 ![](./inst/webApp/www/screenshots/cd45_annotated.svg)  
 **Figure 1. Automatic annotation of CD45 protein topology**. Identifier `P08575` was searched against UniProt by ProToDeviseR. Table and JSON code were automatically generated and graphic was rendered in the *Image generator* tab. Regions, motifs and markups are indicated.
 
 ## Dependencies and installation
-ProToDeviser and its R dependencies can be installed as shown in the code box below. Depending on your system, you may need to also install system dependencies (outside R) required by them. [See external Linux deps here](./inst/webApp/www/deps.md).
+ProToDeviser and its R dependencies can be installed as shown in the code box below. Depending on your system, you may need to also install system dependencies (outside R) required by them.
+
+* [Click here](./inst/webApp/www/deps.md) for external Linux deps, and **system-wide** installation.
 
 ```R
 # from CRAN
@@ -45,7 +47,7 @@ install.packages("rentrez")
 install.packages("shiny")
 install.packages("shinyBS")
 install.packages("rclipboard")
-install.packages("shinyjs")
+install.packages("viridis")
 install.packages("DT")
 install.packages("textshaping")
 install.packages("ragg")
@@ -53,6 +55,7 @@ install.packages("markdown")
 install.packages("pkgdown")
 install.packages("gggenomes")
 install.packages("devtools")
+install.packages("shinybusy")
 
 # from BioConductor
 install.packages("BiocManager")
