@@ -26,7 +26,8 @@ predicted.JSON(
   netOglyc.tsv = NULL,
   netOglyc.cutoff = NULL,
   netPhos.tsv = NULL,
-  netPhos.cutoff = NULL
+  netPhos.cutoff = NULL,
+  gradient = NULL
 )
 }
 \arguments{
@@ -58,9 +59,9 @@ predicted.JSON(
 
 \item{SCANSITE.accessibility}{ScanSite accessibility cutoff}
 
-\item{ANCHOR.tsv}{IUPred/Anchor2 results file}
+\item{ANCHOR.tsv}{Anchor2 results file}
 
-\item{ANCHOR.cutoff}{IUPred/Anchor2 scores cutoff}
+\item{ANCHOR.cutoff}{Anchor2 scores cutoff}
 
 \item{netNglyc.tsv}{NetNGlyc results file}
 
@@ -92,6 +93,7 @@ library("openxlsx")
 library("gggenomes")
 library("IRanges")
 library("rentrez")
+library("viridis")
 library("protodeviser")
 
 # path to CD45 examples of predicted results
@@ -128,5 +130,6 @@ cd45_predicted <- predicted.JSON(protein.length = 1306,
                netOglyc.tsv = cd45_netOglyc,
                netOglyc.cutoff = 0.9,
                netPhos.tsv = cd45_netPhos,
-               netPhos.cutoff = 0.95)
+               netPhos.cutoff = 0.95,
+	       gradient = "rainbow")
 }

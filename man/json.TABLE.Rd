@@ -25,6 +25,7 @@ library("openxlsx")
 library("gggenomes")
 library("IRanges")
 library("rentrez")
+library("viridis")
 library("protodeviser")
 
 # path to CD45 examples

@@ -5,6 +5,7 @@ library("openxlsx")
 library("gggenomes")
 library("IRanges")
 library("rentrez")
+library("viridis")
 library("protodeviser")
 
 # path to CD45 examples of predicted results
@@ -41,4 +42,5 @@ cd45_predicted <- predicted.JSON(protein.length = 1306,
                netOglyc.tsv = cd45_netOglyc,
                netOglyc.cutoff = 0.9,
                netPhos.tsv = cd45_netPhos,
-               netPhos.cutoff = 0.95)
+               netPhos.cutoff = 0.95,
+	       gradient = "rainbow")

@@ -12,7 +12,8 @@ custom.JSON(
   link.url = NULL,
   taxid = NULL,
   input.file = NULL,
-  input.format = NULL
+  input.format = NULL,
+  gradient = NULL
 )
 }
 \arguments{
@@ -48,6 +49,7 @@ library("openxlsx")
 library("gggenomes")
 library("IRanges")
 library("rentrez")
+library("viridis")
 library("protodeviser")
 
 # path to CD45 examples
@@ -63,5 +65,6 @@ cd45_hsap <- custom.JSON(protein.length = 1306,
                link.url = "https://www.uniprot.org/uniprotkb/P08575/",
                taxid = "9606",
                input.file = custom,
-               input.format = "xlsx")
+               input.format = "xlsx",
+	       gradient = "rainbow")
 }
