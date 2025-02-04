@@ -9,6 +9,7 @@ library("openxlsx")
 library("gggenomes")
 library("IRanges")
 library("rentrez")
+library("viridis")
 
 # Retrieve GenPept from NCBI by accession number
 get.NCBI.gp <- function(gp = NULL){
@@ -756,13 +757,45 @@ regions.style <- function(x, y, t){
   return(style)
 }
 
+# Determine what colour gradient to use (gradient = NULL), specifying number of
+# colours (colours = NULL).
+colour.gradient <- function(gradient = NULL, colours = NULL){
+
+  # rainbow
+  if (gradient == "rainbow") {
+    grad <- rainbow(colours)
+  }
+
+  # viridis and its variants
+  if (gradient == "viridis" | gradient == "magma" | gradient == "plasma" | gradient == "inferno" | gradient == "cividis" | gradient == "mako" | gradient == "rocket" | gradient == "turbo") {
+    grad <- viridis(n = colours, option = gradient)
+    }
+
+  # cyan-magenta
+  if (gradient == "cyan-magenta") {
+    grad <- cm.colors(colours)
+    }
+
+  # heatmap
+  if (gradient == "heat") {
+    grad <- heat.colors(colours)
+    }
+
+  return(grad)
+
+}
+
 # Write a data frame with regions (domains) and determine their shapes and colours.
-prepare.regions <- function(entry = NULL){
+prepare.regions <- function(entry = NULL, gradient = NULL){
 
   # Create rainbow gradient of features, by "regions". use name (4), not description (5)
   note <- unique(subset(entry, entry[, 1] == "regions")[, 4])
   set.seed(1)
-  regions.paint <- data.frame(note = note, paint = rainbow(length(note)))
+
+  # use the colour.gradient function to offer more colour schemes
+  regions.paint <- data.frame(note = note, paint = colour.gradient(gradient, colours = length(note)))
+  #regions.paint <- data.frame(note = note, paint = rainbow(length(note)))
+
 
   # Regions (domains)
   regions <- subset(entry, entry$type == "regions")
@@ -859,14 +892,14 @@ prepare.markups <- function(entry = NULL){
 }
 
 # Add features up into a list
-prepare.features <- function(entry = NULL){
+prepare.features <- function(entry = NULL, gradient = NULL){
 
   # empty list to add them up one by one if they exist
   li <- list()
 
   # TODO: change the wayy df is added to list? using $dfname?
   if (isTRUE(setequal(intersect("regions", entry$type), "regions"))) {
-    df.regions <- prepare.regions(entry)
+    df.regions <- prepare.regions(entry, gradient)
     li[["regions"]] <- df.regions
   }else{
     li[["regions"]] <- data.frame()
@@ -1035,7 +1068,8 @@ process.SMART <- function(smart.tsv = NULL){
     if (smart[r,1] == "signal peptide" |
         smart[r,1] == "low complexity" |
         smart[r,1] == "intrinsic disorder" |
-        smart[r,1] == "transmembrane region") {
+        smart[r,1] == "transmembrane region" |
+        smart[r,1] == "coiled coil") {
       tp <- "motifs"
       ds <- "N/A"
       ac <- "N/A"
@@ -1211,7 +1245,8 @@ process.NetNGlyc <- function(netnglyc.tsv = NULL, cutoff = 0.5){
 
 # Process NetOGlyc results
 process.NetOGlyc <- function(netoglyc.tsv = NULL, cutoff = 0.5){
-  oglyc <- read.table(netoglyc.tsv)
+  oglyc <- read.table(netoglyc.tsv, header = F)
+  oglyc <- oglyc[,1:6]
   oglyc <- subset(oglyc, oglyc[, 6] > cutoff)
 
   if (nrow(oglyc != 0)) {
@@ -1222,7 +1257,7 @@ process.NetOGlyc <- function(netoglyc.tsv = NULL, cutoff = 0.5){
                      description = "O-glycosylation site",
                      scoreName = "threshold",
                      score = oglyc[,6],
-                     database = "NetNGlyc",
+                     database = "NetOGlyc",
                      accession = "N/A",
                      sequence = "N/A",
                      target = "N/A")
@@ -1235,7 +1270,7 @@ process.NetOGlyc <- function(netoglyc.tsv = NULL, cutoff = 0.5){
 
 # Process NetPhos results
 process.NetPhos <- function(netphos.tsv = NULL, cutoff = 0.5){
-  phos <- read.table(netphos.tsv, skip = 2, header = F, comment.char = "/", fill = T)
+  phos <- read.table(netphos.tsv, header = F, comment.char = "/", fill = T)
   phos <- phos[, 2:8]
   phos <- na.omit(phos)
   phos <- subset(phos, phos[, 7] == "YES" & phos[, 5] > cutoff)
@@ -1333,7 +1368,7 @@ process.ScanSite <- function(scansite.tsv = NULL, score = 0.5, percentile = 0, a
 #' @returns Generates topology organisation scheme file in Pfam's JSON format.
 #'
 #' @export
-id.JSON <- function(input = NULL, database = NULL, offline = FALSE, regions.on = TRUE, motifs.on = TRUE, markups.on = TRUE){
+id.JSON <- function(input = NULL, database = NULL, offline = FALSE, regions.on = TRUE, motifs.on = TRUE, markups.on = TRUE, gradient = NULL){
   db <- tolower(database)
 
   # which database are we using? Check if input.file is from disk or retrieved?
@@ -1358,7 +1393,7 @@ id.JSON <- function(input = NULL, database = NULL, offline = FALSE, regions.on =
     stop()
   }
 
-  prep <- prepare.features(entry = features)
+  prep <- prepare.features(entry = features, gradient = gradient)
   scheme <- add.features(meta, length, prep, regions.on, motifs.on, markups.on)
   scheme <- toJSON(scheme, pretty = T)
   #validate(scheme)
@@ -1422,7 +1457,8 @@ predicted.JSON <- function(protein.length = NULL,
                          netOglyc.tsv = NULL,
                          netOglyc.cutoff = NULL,
                          netPhos.tsv = NULL,
-                         netPhos.cutoff = NULL){
+                         netPhos.cutoff = NULL,
+                         gradient = NULL){
 
   # do not accept length below 1
   if (!is.numeric(protein.length) | isTRUE(protein.length < 1) | is.null(protein.length) | is.na(protein.length)) {
@@ -1497,7 +1533,7 @@ predicted.JSON <- function(protein.length = NULL,
 
   features <- rbind(smart.df, elm.df, anchor.df, nglyc.df, oglyc.df, phos.df, scnsci.df)
 
-  prep <- prepare.features(entry = features)
+  prep <- prepare.features(entry = features, gradient = gradient)
   scheme <- add.features(meta, length, prep)
   scheme <- toJSON(scheme, pretty = T)
   #validate(scheme)
@@ -1525,13 +1561,14 @@ predicted.JSON <- function(protein.length = NULL,
 #'
 #' @export
 custom.JSON <- function(protein.length = NULL,
-                             accession.number = NULL,
-                             description = NULL,
-                             organism = NULL,
-                             link.url = NULL,
-                             taxid = NULL,
-                             input.file = NULL,
-                             input.format = NULL){
+                        accession.number = NULL,
+                        description = NULL,
+                        organism = NULL,
+                        link.url = NULL,
+                        taxid = NULL,
+                        input.file = NULL,
+                        input.format = NULL,
+                        gradient = NULL){
 
   # do not accept length below 1
   if (!is.numeric(protein.length) | isTRUE(protein.length < 1) | is.null(protein.length) | is.na(protein.length)) {
@@ -1553,7 +1590,7 @@ custom.JSON <- function(protein.length = NULL,
     features <- read.custom(inp = input.file, ft = input.format)
   }
 
-  prep <- prepare.features(entry = features)
+  prep <- prepare.features(entry = features, gradient = gradient)
   scheme <- add.features(meta, length, prep)
   scheme <- toJSON(scheme, pretty = T)
   #validate(scheme)

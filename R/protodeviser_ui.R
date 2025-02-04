@@ -21,10 +21,11 @@ protodeviser_ui <- function(){
   library("gggenomes")
   library("IRanges")
   library("rentrez")
+  library("viridis")
   library("shiny")
   library("shinyBS")
+  library("shinybusy")
   library("rclipboard")
-  #library("shinyjs")
   library("DT")
 
   # where is webApp? Find and run from there
