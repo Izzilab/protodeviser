@@ -4,11 +4,20 @@
 The **Pro**tein **To**pology **Devise**r is an **R** package for the automatic generation of protein topology code in JSON format. The code can be easily rendered into a graph, by Pfam's custom-domains generator. This excellent tool is **not** developed by us, but is embedded with the program for users' convenience. A table summary is also prepared. 
 
 [![Badge](https://img.shields.io/badge/ProtoDeViseR-@R_Shinyapps-blue)](https://matrinet.shinyapps.io/ProToDeviser/)
-[![Badge](https://img.shields.io/badge/Manuscript-bioRxiv-red)](https://doi.org/10.1101/2024.06.04.597333)
-[![Badge](https://img.shields.io/badge/Source-v_0.9.999-green)](https://github.com/Izzilab/protodeviser/releases/tag/0.9.999)
+[![Badge](https://img.shields.io/badge/Paper-BMC_Bioinformatics-red)](https://doi.org/10.1186/s12859-025-06088-2)
+[![Badge](https://img.shields.io/badge/Source-v_1.0-green)](https://github.com/Izzilab/protodeviser/releases/tag/1.0)
 
-This is the R package of ProToDeviseR, which can be installed locally. **If you are looking for the online version of the program (which requires no installation)**, visit [https://matrinet.shinyapps.io/ProToDeviser/](https://matrinet.shinyapps.io/ProToDeviser/). 
+This is the R package of ProToDeviseR, which can be installed locally.
+**If you are looking for the online version of the program (which requires no installation)**,
+visit [https://matrinet.shinyapps.io/ProToDeviser/](https://matrinet.shinyapps.io/ProToDeviser/).
 
+This work, as well as, the publication open access (OA) has been supported by:  
+
+[![Badge](https://img.shields.io/badge/CFF-2023--2024-lightblue)](https://syopasaatio.fi/)
+[![Badge](https://img.shields.io/badge/DigiHealth-Oulu_University/Infotech-lightblue)](https://www.oulu.fi/en/research/creating-better-health-our-digital-health-knowhow)
+[![Badge](https://img.shields.io/badge/EU-CARES-lightblue)](https://www.cares-eu.org/)
+[![Badge](https://img.shields.io/badge/OA-Oulu_University/Hospital-lightblue)](https://www.oulu.fi/)
+---
 ProToDeviseR features a fully functional graphical user interface (UI), implemented in R Shiny:  
 
 ![](./inst/webApp/www/screenshots/protodeviser.png)
@@ -83,3 +92,8 @@ To generate/output features as a table:
 
 ## Other places for visualization
 ProToDeviser ships a modified version of the domains generator. The official custom domains generator has been [decomissioned](https://xfam.wordpress.com/2022/08/04/pfam-website-decommission/), but the [Domain GFX](https://proteinswebteam.github.io/domain-gfx/) "playground" demo is an alternative place.
+
+### Paper and citing
+If you use ProToDeviseR in your work, please cite us, as well as Pfam, where the Image Generator tool is from:  
+* Petrov, P., Izzi, V. **ProToDeviseR: an automated protein topology scheme generator.** BMC Bioinformatics 26, 71 (2025). https://doi.org/10.1186/s12859-025-06088-2
+* Mistry J, Chuguransky S, Williams L, Qureshi M, Salazar GA, Sonnhammer ELL, et al. **Pfam: the protein families database in 2021.** Nucl Acids Res. 2021;49:D412–9.
