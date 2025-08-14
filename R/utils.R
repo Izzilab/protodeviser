@@ -22,14 +22,14 @@ get.NCBI.gp <- function(gp = NULL){
   return(gp)
 }
 
-# # Retrieve GFF from UniProt by accession number
-# get.UniProt.gff <- function(gff = NULL){
-#   gff <- toupper(gff)
-#   gff.tmp <- tempfile(pattern = "UniProt.", tmpdir = tempdir(), fileext = ".gff")
-#   download.file(url = paste0("https://rest.uniprot.org/uniprotkb/", gff, ".gff"), destfile = gff.tmp)
-#   gff <- as.data.frame(read_gff3(gff.tmp))
-#   return(gff)
-# }
+# Retrieve GFF from UniProt by accession number
+get.UniProt.gff <- function(gff = NULL){
+  gff <- toupper(gff)
+  gff.tmp <- tempfile(pattern = "UniProt.", tmpdir = tempdir(), fileext = ".gff")
+  download.file(url = paste0("https://rest.uniprot.org/uniprotkb/", gff, ".gff"), destfile = gff.tmp)
+  gff <- as.data.frame(read_gff3(gff.tmp))
+  return(gff)
+}
 
 # Retrieve JSON from UniProt by accession number
 get.UniProt.json <- function(jsn = NULL){
@@ -46,11 +46,11 @@ read.NCBI.gp <- function(gp = NULL){
   return(df)
 }
 
-# # read UniProt GFF file from disk
-# read.UniProt.gff <- function(gff = NULL){
-#   df <- as.data.frame(read_gff3(gff))
-#   return(df)
-# }
+# read UniProt GFF file from disk
+read.UniProt.gff <- function(gff = NULL){
+  df <- as.data.frame(read_gff3(gff))
+  return(df)
+}
 
 # read UniProt JSON file from disk
 read.UniProt.json <- function(jsn = NULL){
@@ -228,6 +228,7 @@ features.NCBI.gp <- function(gp = NULL){
 
 # Get features from UniProt GFF
 features.UniProt.gff <- function(gff = NULL){
+  if(!is.null(gff$type)){
   entry <- gff
   uniprot.field <- fields.db$uniprot.field
   entry <- merge(entry, uniprot.field, by = "type")
@@ -266,6 +267,10 @@ features.UniProt.gff <- function(gff = NULL){
   }
 
   return(df)
+}else{
+  # In case no features are found...
+  return(NULL)
+}
 }
 
 # Get features from UniProt GFF
@@ -1377,23 +1382,45 @@ id.JSON <- function(input = NULL, database = NULL, offline = FALSE, regions.on =
     meta <- metadata.NCBI.gp(input.file)
     length <- length.NCBI.gp(input.file)
     features <- features.NCBI.gp(input.file)
+    prep <- prepare.features(entry = features, gradient = gradient)
 
   }else if (isTRUE(db == "uniprot")){
     if (isTRUE(offline)) {input.file <- read.UniProt.json(input)}else{input.file <- get.UniProt.json(input)}
-    # if (isTRUE(offline)) {input.file <- read.UniProt.gff(input)}else{input.file <- get.UniProt.gff(input)}
-    # meta <- metadata.UniProt.gff(input.file)
-    # length <- length.UniProt.gff(input.file)
-    # features <- features.UniProt.gff(input.file)
-
     meta <- metadata.UniProt.json(input.file)
     length <- length.UniProt.json(input.file)
     features <- features.UniProt.json(input.file)
+
+    # if the results from UniProt have issues in the default JSON format, try to obtain gff instead, then continue
+    prep <- tryCatch({
+      prepare.features(entry = features, gradient = gradient)
+    }, error = function(e) {
+      if (isTRUE(offline)) {input.file <- read.UniProt.gff(input)}else{input.file <- get.UniProt.gff(input)}
+      meta <- metadata.UniProt.gff(input.file)
+      length <- length.UniProt.gff(input.file)
+      features <- features.UniProt.gff(input.file)
+      prep <- prepare.features(entry = features, gradient = gradient)
+    })
+
+  # }else if (isTRUE(db == "uniprot") & uniprot.data == "json"){
+  #   if (isTRUE(offline)) {input.file <- read.UniProt.json(input)}else{input.file <- get.UniProt.json(input)}
+  #   meta <- metadata.UniProt.json(input.file)
+  #   length <- length.UniProt.json(input.file)
+  #   features <- features.UniProt.json(input.file)
+  #   prep <- prepare.features(entry = features, gradient = gradient)
+  #
+  # }else if(isTRUE(db == "uniprot") & uniprot.data == "gff"){
+  #   if (isTRUE(offline)) {input.file <- read.UniProt.gff(input)}else{input.file <- get.UniProt.gff(input)}
+  #   meta <- metadata.UniProt.gff(input.file)
+  #   length <- length.UniProt.gff(input.file)
+  #   features <- features.UniProt.gff(input.file)
+  #   prep <- prepare.features(entry = features, gradient = gradient)
+
   }else {
     print("Please specify a valid database")
     stop()
   }
 
-  prep <- prepare.features(entry = features, gradient = gradient)
+  #prep <- prepare.features(entry = features, gradient = gradient)
   scheme <- add.features(meta, length, prep, regions.on, motifs.on, markups.on)
   scheme <- toJSON(scheme, pretty = T)
   #validate(scheme)
