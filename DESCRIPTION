@@ -1,6 +1,6 @@
 Package: protodeviser
 Title: Protein Topology Deviser
-Version: 1.0
+Version: 1.01
 Description: Create concise protein topology schemes
 Author: Petar Petrov & Valerio Izzi
 Authors@R: c(
