@@ -64,14 +64,34 @@
 <div class="row">
    <span class="label" style="width:192px">Motif opacity (alpha):</span><input id="motifOpacity" value="0.6"><span class="text">&nbsp; Set the transparency level for motifs.</span>
 </div>
+
+<div class="row">
+   <span class="label" style="width:192px">Image height (pixels):</span><input id="targetHeight" value="0"><span class="text">&nbsp; Set fixed height in pixels (0 = auto scale).</span>
+</div>
+
 <div class="cleaner"><!-- empty --></div>
 <br>
 <!--  <div id="sequence" class="panel">-->
 <div class="panel">
+  <!-- Batch processing input -->
+  <div class="row">
+    <span class="label" style="width:192px">Batch process JSON files:</span>
+    <input type="file" id="batchFileInput" accept=".json" multiple />
+    <button id="batchProcess" onclick="batchProcessFiles()">Process All Files</button>
+  </div>
+
    <div class="row">
    	<!--  <button id="pasteButton">Paste clipboard contents</button>-->
 	<button id="submit">Generate graphic from JSON code</button>
 	<button id="clear">Clear code box</button>
+   </div>
+  <!-- Batch processing status -->
+  <div id="batchStatus" style="display: none; margin: 10px 0; padding: 10px; border: 1px solid #ccc; background: #f9f9f9;">
+    <h3>Batch Processing Status:</h3>
+    <div id="progressInfo"></div>
+    <div id="progressBar" style="width: 100%; height: 20px; background: #ddd; border-radius: 10px; overflow: hidden;">
+      <div id="progressFill" style="width: 0%; height: 100%; background: #4CAF50; transition: width 0.3s;"></div>
+    </div>
    </div>
    
    <div id="errors" style="display: none">
@@ -95,6 +115,161 @@
   // <![CDATA[
 
   var generator;
+  var batchProcessing = false;
+
+  // Function to load JSON from file
+  function loadJsonFromFile() {
+    const fileInput = document.getElementById("jsonFileInput");
+    const file = fileInput.files[0];
+
+    if (!file) {
+      alert("Please select a JSON file first.");
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      try {
+        const jsonContent = e.target.result;
+        // Validate JSON
+        JSON.parse(jsonContent);
+        document.getElementById("seq").value = jsonContent;
+      } catch (error) {
+        alert("Invalid JSON file: " + error.message);
+      }
+    };
+    reader.readAsText(file);
+  }
+
+  // Function to download canvas as PNG
+  function downloadCanvasAsPng(filename = "protein_domain_graphic.png") {
+    const canvas = document.querySelector('canvas[id^="anonymous_element_"]');
+    if (!canvas) {
+      alert("No graphic generated yet. Please generate a graphic first.");
+      return;
+    }
+
+    const link = document.createElement("a");
+    link.download = filename;
+    link.href = canvas.toDataURL("image/png");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  // Function to wait for canvas to be generated
+  function waitForCanvas() {
+    return new Promise((resolve) => {
+      const checkCanvas = () => {
+        const canvas = document.querySelector('canvas[id^="anonymous_element_"]');
+        if (canvas) {
+          // Wait a bit more to ensure rendering is complete
+          setTimeout(() => resolve(canvas), 100);
+        } else {
+          setTimeout(checkCanvas, 50);
+        }
+      };
+      checkCanvas();
+    });
+  }
+
+  // Function to process a single file and generate PNG
+  async function processSingleFile(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = async function(e) {
+        try {
+          const jsonContent = e.target.result;
+          const jsonData = JSON.parse(jsonContent); // Validate JSON and parse
+
+          // Extract accession from metadata
+          let filename = file.name.replace(".json", ".png"); // fallback
+          if (
+            jsonData.metadata &&
+            jsonData.metadata.length > 0 &&
+            jsonData.metadata[0].accession
+          ) {
+            filename = jsonData.metadata[0].accession + ".png";
+          }
+
+          // Load JSON into textarea
+          document.getElementById("seq").value = jsonContent;
+
+          // Simulate submit button click
+          document.getElementById("submit").click();
+
+          // Wait for canvas to be generated
+          await waitForCanvas();
+
+          // Download the PNG
+          downloadCanvasAsPng(filename);
+
+          resolve(filename);
+        } catch (error) {
+          reject(`Error processing ${file.name}: ${error.message}`);
+        }
+      };
+      reader.readAsText(file);
+    });
+  }
+
+  // Function to batch process multiple files
+  async function batchProcessFiles() {
+    const fileInput = document.getElementById("batchFileInput");
+    const files = Array.from(fileInput.files);
+
+    if (files.length === 0) {
+      alert("Please select JSON files for batch processing.");
+      return;
+    }
+
+    batchProcessing = true;
+    const statusDiv = document.getElementById("batchStatus");
+    const progressInfo = document.getElementById("progressInfo");
+    const progressFill = document.getElementById("progressFill");
+
+    statusDiv.style.display = "block";
+
+    let processed = 0;
+    let errors = [];
+
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+
+      try {
+        progressInfo.innerHTML = `Processing: ${file.name} (${i + 1}/${files.length})`;
+
+        await processSingleFile(file);
+        processed++;
+
+        // Add delay between files to ensure proper processing
+        await new Promise(resolve => setTimeout(resolve, 500));
+      } catch (error) {
+        errors.push(error);
+        console.error(error);
+      }
+
+      // Update progress bar
+      const progress = ((i + 1) / files.length) * 100;
+      progressFill.style.width = progress + "%";
+    }
+
+    // Show completion status
+    let statusMessage = `Batch processing complete! Processed: ${processed}/${files.length} files`;
+    if (errors.length > 0) {
+      statusMessage += `\nErrors: ${errors.length}`;
+      console.log("Errors encountered:", errors);
+    }
+
+    progressInfo.innerHTML = statusMessage;
+    batchProcessing = false;
+
+    // Hide status after 5 seconds
+    setTimeout(() => {
+      statusDiv.style.display = "none";
+    }, 5000);
+  }
+
   document.observe( "dom:loaded", function() {
     generator = new GraphicGenerator();
   } );
@@ -109,3 +284,6 @@
 Event.observe( window, 'load', addHoverListeners, false );
       // ]]>
 </script>
+
+</body>
+</html>

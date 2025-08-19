@@ -306,6 +306,7 @@ var PfamGraphic = Class.create( {
     if ( sequence !== undefined ) {
       this.setSequence( sequence );
     }
+    this._targetHeight = undefined;
     
     this._saveLevel = 0;
   },
@@ -407,6 +408,9 @@ var PfamGraphic = Class.create( {
   setImageParams: function( userImageParams ) {
     this._imageParams = Object.extend( this._imageParams, userImageParams );
     this._applyImageParams = true;
+    if( userImageParams.targetHeight !== undefined ) {
+      this._targetHeight = userImageParams.targetHeight;
+    }
     return this;
   },
 
@@ -633,6 +637,43 @@ var PfamGraphic = Class.create( {
                        this._heights.bridges.upMax,
                        this._imageParams.regionHeight / 2 ].max() + 1;
                        // that single pixel is just a fudge factor...
+
+    // Calculate space needed above and below the baseline
+    var spaceAbove = this._baseline;
+    var spaceBelow = (this._canvasHeight / this._imageParams.yscale) - this._baseline;
+
+    // For centered layout, use the maximum space on both sides
+    var maxSpace = Math.max(spaceAbove, spaceBelow);
+
+    // If targetHeight is specified and greater than 0, use it as fixed canvas height
+    if (this._imageParams.targetHeight && this._imageParams.targetHeight > 0) {
+        // Set canvas to exact target height
+        this._canvasHeight = this._imageParams.targetHeight;
+
+        // Calculate where to place the baseline to center the protein
+        // The protein's total height in pixels (at current scale)
+        var proteinHeight = (maxSpace * 2) * this._imageParams.yscale;
+
+        // Center the protein within the target height
+        var topPadding = (this._imageParams.targetHeight - proteinHeight) / 2;
+
+        // Set baseline position (in unscaled units)
+        // topPadding is in pixels, so divide by yscale to get unscaled units
+        this._baseline = (topPadding / this._imageParams.yscale) + maxSpace;
+
+        // If protein is taller than target height, just center what we can
+        if (proteinHeight > this._imageParams.targetHeight) {
+            // Center the baseline in the available canvas
+            this._baseline = this._imageParams.targetHeight / (2 * this._imageParams.yscale);
+        }
+    } else {
+        // No target height or targetHeight is 0: use autoscaling
+        this._canvasHeight = (maxSpace * 2) * this._imageParams.yscale;
+        this._baseline = maxSpace;
+    }
+
+    // Reset yOffset since we're positioning via baseline
+    this._imageParams.yOffset = 0;
 
     return this;
   },
