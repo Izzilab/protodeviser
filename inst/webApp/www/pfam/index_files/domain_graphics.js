@@ -642,6 +642,32 @@ var PfamGraphic = Class.create( {
                        this._imageParams.regionHeight / 2 ].max() + 1;
                        // that single pixel is just a fudge factor...
 
+    // Calculate space needed above and below the baseline
+    var spaceAbove = this._baseline;
+    var spaceBelow = (this._canvasHeight / this._imageParams.yscale) - this._baseline;
+
+    // For centered layout, use the maximum space on both sides
+    var maxSpace = Math.max(spaceAbove, spaceBelow);
+
+    // Calculate the new unscaled height needed for centering
+    var newUnscaledHeight = maxSpace * 2;
+
+    // If targetHeight is specified, adjust yscale to maintain it
+    if (this._imageParams.targetHeight && this._imageParams.targetHeight > 0) {
+        // Recalculate yscale to fit the new layout into the target height
+        this._imageParams.yscale = this._imageParams.targetHeight / newUnscaledHeight;
+        this._canvasHeight = this._imageParams.targetHeight;
+    } else {
+        // No target height specified, just update canvas height with current scale
+        this._canvasHeight = newUnscaledHeight * this._imageParams.yscale;
+    }
+
+    // Center the baseline
+    this._baseline = maxSpace;
+
+    // Reset yOffset since baseline is already centered
+    this._imageParams.yOffset = 0;
+
     return this;
   },
   
