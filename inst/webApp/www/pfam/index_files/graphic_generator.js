@@ -490,6 +490,7 @@ var GraphicGenerator = Class.create( {
       //defaultMarkupHeight: $F("defaultMarkupHeight"),
       motifOpacity: $F("motifOpacity"),
       targetHeight: $F("targetHeight"), // Custom parameter, set desired height in pixels
+      sequenceEndPadding: 0 // Reduces padding on both sides
     } );
 
     // render the sequence
