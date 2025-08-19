@@ -306,6 +306,7 @@ var PfamGraphic = Class.create( {
     if ( sequence !== undefined ) {
       this.setSequence( sequence );
     }
+    this._targetHeight = undefined;
     
     this._saveLevel = 0;
   },
@@ -407,6 +408,9 @@ var PfamGraphic = Class.create( {
   setImageParams: function( userImageParams ) {
     this._imageParams = Object.extend( this._imageParams, userImageParams );
     this._applyImageParams = true;
+    if( userImageParams.targetHeight !== undefined ) {
+      this._targetHeight = userImageParams.targetHeight;
+    }
     return this;
   },
 
@@ -604,6 +608,10 @@ var PfamGraphic = Class.create( {
                            this._heights.bridges.downMax,
                            ( this._regionHeight / 2 + 1 ) ].max() + 1;
                          // that single pixel is just a fudge factor...
+    // Auto-calculate yscale if targetHeight is specified and > 0
+    if( this._targetHeight !== undefined && this._targetHeight > 0 ) {
+      this._imageParams.yscale = this._targetHeight / this._canvasHeight;
+    }
 
     // finally, scale the height by the specified factor
     this._canvasHeight *= this._imageParams.yscale;
