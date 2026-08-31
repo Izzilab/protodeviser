@@ -3,13 +3,13 @@
 
 The **Pro**tein **To**pology **Devise**r is an **R** package for the automatic generation of protein topology code in JSON format. The code can be easily rendered into a graph, by Pfam's custom-domains generator. This excellent tool is **not** developed by us, but is embedded with the program for users' convenience. A table summary is also prepared. 
 
-[![Badge](https://img.shields.io/badge/ProtoDeViseR-@R_Shinyapps-blue)](https://matrinet.shinyapps.io/ProToDeviser/)
+[![Badge](https://img.shields.io/badge/ProtoDeViseR-@R_Posit-blue)](https://izzilab-protodeviser.share.connect.posit.cloud/)
 [![Badge](https://img.shields.io/badge/Paper-BMC_Bioinformatics-red)](https://doi.org/10.1186/s12859-025-06088-2)
 [![Badge](https://img.shields.io/badge/Source-v_1.0-green)](https://github.com/Izzilab/protodeviser/releases/tag/1.0)
 
 This is the R package of ProToDeviseR, which can be installed locally.
 **If you are looking for the online version of the program (which requires no installation)**,
-visit [https://matrinet.shinyapps.io/ProToDeviser/](https://matrinet.shinyapps.io/ProToDeviser/).
+visit [https://izzilab-protodeviser.share.connect.posit.cloud/](https://izzilab-protodeviser.share.connect.posit.cloud/).
 
 This work, as well as, the publication open access (OA) has been supported by:  
 
